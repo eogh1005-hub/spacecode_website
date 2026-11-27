@@ -32,6 +32,17 @@ body.home.oh-home header {
   background: transparent;
   border-bottom: 0;
   mix-blend-mode: normal;
+  opacity: 0;
+  transform: translateY(-12px);
+  pointer-events: none;
+  transition: opacity 0.28s ease, transform 0.28s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+body.home.oh-home header.is-visible,
+body.home.oh-home.mega-open header {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 body.home.oh-home header.is-solid {
@@ -41,8 +52,17 @@ body.home.oh-home header.is-solid {
 }
 
 body.home.oh-home .bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
   max-width: none;
   padding: 22px 28px;
+}
+
+body.home.oh-home .logo {
+  justify-self: start;
+  z-index: 1;
 }
 
 body.home.oh-home .logo-name,
@@ -66,8 +86,38 @@ body.home.oh-home.mega-open header .logo-mark {
   filter: none !important;
 }
 
-body.home.oh-home .bar-tools {
+body.home.oh-home .oh-top-nav {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(18px, 2.4vw, 32px);
+  justify-self: center;
+  grid-column: 2;
+  width: max-content;
+  margin: 0 auto;
+}
+
+body.home.oh-home .oh-top-nav > a,
+body.home.oh-home header.on-dark .oh-top-nav > a,
+body.home.oh-home header.is-solid .oh-top-nav > a {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  color: #121212 !important;
+  font-family: Pretendard, "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+body.home.oh-home .bar-tools {
+  display: none;
+  justify-self: end;
   align-items: center;
   gap: 22px;
 }
@@ -75,25 +125,33 @@ body.home.oh-home .bar-tools {
 body.home.oh-home .mega-toggle,
 body.home.oh-home header:not(.is-solid) .mega-toggle,
 body.home.oh-home header.on-dark .mega-toggle,
-body.home.oh-home header.is-solid .mega-toggle,
-body.home.oh-home header .account-nav,
-body.home.oh-home header .account-nav a,
-body.home.oh-home header.on-dark .account-nav,
-body.home.oh-home header.on-dark .account-nav a,
-body.home.oh-home header.on-dark nav,
-body.home.oh-home header.on-dark nav a {
+body.home.oh-home header.is-solid .mega-toggle {
   border: 0;
   background: transparent;
   padding: 0;
   margin: 0;
   color: #121212 !important;
   font-family: Pretendard, "Segoe UI", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 650;
   line-height: 1.2;
   letter-spacing: -0.03em;
   text-transform: none;
   cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  body.home.oh-home .bar {
+    grid-template-columns: 1fr auto;
+  }
+
+  body.home.oh-home .oh-top-nav {
+    display: none;
+  }
+
+  body.home.oh-home .bar-tools {
+    display: flex;
+  }
 }
 
 body.home.oh-home .oh-page {
@@ -178,18 +236,15 @@ body.home.oh-home .oh-hero-shade {
   pointer-events: none;
 }
 
-body.home.oh-home .oh-hero-schematic {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  pointer-events: none;
-  will-change: opacity;
+body.home.oh-home .oh-iot-panel {
+  position: relative;
+  height: 100dvh;
+  min-height: 100dvh;
+  background: #0a0a0a;
+  color: #f7f7f7;
 }
 
-body.home.oh-home .oh-hero-schematic .sch-panel {
+body.home.oh-home .oh-iot-panel .sch-panel {
   display: grid;
   grid-template-columns: 1.12fr 0.88fr;
   align-items: stretch;
@@ -199,7 +254,7 @@ body.home.oh-home .oh-hero-schematic .sch-panel {
   background: #0a0a0a;
 }
 
-body.home.oh-home .oh-hero-schematic .sch-photo {
+body.home.oh-home .oh-iot-panel .sch-photo {
   margin: 0;
   position: relative;
   height: 100%;
@@ -208,7 +263,7 @@ body.home.oh-home .oh-hero-schematic .sch-photo {
   background: #cfcbc6;
 }
 
-body.home.oh-home .oh-hero-schematic .sch-photo img {
+body.home.oh-home .oh-iot-panel .sch-photo img {
   position: absolute;
   inset: 0;
   display: block;
@@ -218,7 +273,7 @@ body.home.oh-home .oh-hero-schematic .sch-photo img {
   object-position: center 28%;
 }
 
-body.home.oh-home .oh-hero-schematic .sch-explain {
+body.home.oh-home .oh-iot-panel .sch-explain {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -234,7 +289,7 @@ body.home.oh-home .oh-hero-schematic .sch-explain {
   overflow: auto;
 }
 
-body.home.oh-home .oh-hero-schematic .sch-explain-kicker {
+body.home.oh-home .oh-iot-panel .sch-explain-kicker {
   margin: 0;
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -242,7 +297,7 @@ body.home.oh-home .oh-hero-schematic .sch-explain-kicker {
   color: rgba(255, 255, 255, 0.5);
 }
 
-body.home.oh-home .oh-hero-schematic .sch-explain-title {
+body.home.oh-home .oh-iot-panel .sch-explain-title {
   margin: 0;
   font-size: clamp(1.6rem, 3vw, 2.35rem);
   font-weight: 700;
@@ -250,7 +305,7 @@ body.home.oh-home .oh-hero-schematic .sch-explain-title {
   letter-spacing: -0.03em;
 }
 
-body.home.oh-home .oh-hero-schematic .sch-explain-lead {
+body.home.oh-home .oh-iot-panel .sch-explain-lead {
   margin: 0;
   max-width: 36em;
   font-size: clamp(14px, 1.35vw, 16px);
@@ -258,7 +313,7 @@ body.home.oh-home .oh-hero-schematic .sch-explain-lead {
   color: rgba(255, 255, 255, 0.72);
 }
 
-body.home.oh-home .oh-hero-schematic .sch-steps {
+body.home.oh-home .oh-iot-panel .sch-steps {
   list-style: none;
   margin: 4px 0 0;
   padding: 0;
@@ -267,7 +322,7 @@ body.home.oh-home .oh-hero-schematic .sch-steps {
   border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-body.home.oh-home .oh-hero-schematic .sch-steps li {
+body.home.oh-home .oh-iot-panel .sch-steps li {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 12px;
@@ -276,19 +331,19 @@ body.home.oh-home .oh-hero-schematic .sch-steps li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-body.home.oh-home .oh-hero-schematic .sch-steps span {
+body.home.oh-home .oh-iot-panel .sch-steps span {
   font-size: clamp(13px, 1.25vw, 15px);
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
-body.home.oh-home .oh-hero-schematic .sch-steps em {
+body.home.oh-home .oh-iot-panel .sch-steps em {
   font-style: normal;
   font-size: clamp(12px, 1.1vw, 14px);
   color: rgba(255, 255, 255, 0.55);
 }
 
-body.home.oh-home .oh-hero-schematic .sch-waves {
+body.home.oh-home .oh-iot-panel .sch-waves {
   display: grid;
   gap: 8px;
   margin-top: 4px;
@@ -296,27 +351,27 @@ body.home.oh-home .oh-hero-schematic .sch-waves {
   border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-body.home.oh-home .oh-hero-schematic .sch-waves-title {
+body.home.oh-home .oh-iot-panel .sch-waves-title {
   margin: 0 0 4px;
   font-size: clamp(13px, 1.25vw, 15px);
   font-weight: 600;
   color: rgba(255, 255, 255, 0.88);
 }
 
-body.home.oh-home .oh-hero-schematic .sch-wave-row {
+body.home.oh-home .oh-iot-panel .sch-wave-row {
   display: grid;
   grid-template-columns: 44px 1fr;
   gap: 14px;
   align-items: center;
 }
 
-body.home.oh-home .oh-hero-schematic .sch-wave-row span {
+body.home.oh-home .oh-iot-panel .sch-wave-row span {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.7);
   font-variant-numeric: tabular-nums;
 }
 
-body.home.oh-home .oh-hero-schematic .sch-wave-row svg {
+body.home.oh-home .oh-iot-panel .sch-wave-row svg {
   display: block;
   width: 100%;
   max-width: 280px;
@@ -324,7 +379,7 @@ body.home.oh-home .oh-hero-schematic .sch-wave-row svg {
   overflow: visible;
 }
 
-body.home.oh-home .oh-hero-schematic .sch-wave {
+body.home.oh-home .oh-iot-panel .sch-wave {
   fill: none;
   stroke: rgba(255, 255, 255, 0.92);
   stroke-width: 1.4;
@@ -333,17 +388,17 @@ body.home.oh-home .oh-hero-schematic .sch-wave {
 }
 
 @media (max-width: 760px) {
-  body.home.oh-home .oh-hero-schematic .sch-panel {
+  body.home.oh-home .oh-iot-panel .sch-panel {
     grid-template-columns: 1fr;
     grid-template-rows: 42% 58%;
   }
 
-  body.home.oh-home .oh-hero-schematic .sch-photo {
+  body.home.oh-home .oh-iot-panel .sch-photo {
     min-height: 0;
     max-height: none;
   }
 
-  body.home.oh-home .oh-hero-schematic .sch-explain {
+  body.home.oh-home .oh-iot-panel .sch-explain {
     border-left: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.14);
     padding: 20px 18px 18px;
@@ -370,12 +425,19 @@ body.home.oh-home .oh-hero-brand {
 
 body.home.oh-home .oh-hero-lead {
   margin: 0;
-  max-width: 22em;
+  max-width: none;
   color: rgba(255, 255, 255, 0.86);
   font-size: clamp(1rem, 1.5vw, 1.2rem);
   line-height: 1.65;
   letter-spacing: -0.02em;
   word-break: keep-all;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  body.home.oh-home .oh-hero-lead {
+    white-space: normal;
+  }
 }
 
 body.home.oh-home .oh-section {
@@ -587,27 +649,34 @@ body.home.oh-home .oh-step p {
   word-break: keep-all;
 }
 
-body.home.oh-home .oh-cta {
-  background: var(--oh-paper);
+body.home.oh-home .oh-dashboard {
+  background: #f7f7f7;
   text-align: left;
 }
 
+body.home.oh-home .oh-dashboard h2,
 body.home.oh-home .oh-cta h2 {
   margin: 0 0 18px;
-  max-width: 12em;
+  max-width: 14em;
   font-size: clamp(1.8rem, 3.4vw, 2.8rem);
   font-weight: 800;
   letter-spacing: -0.045em;
   word-break: keep-all;
 }
 
-body.home.oh-home .oh-cta p {
+body.home.oh-home .oh-dashboard p,
+body.home.oh-home .oh-cta > .oh-section > p {
   margin: 0 0 28px;
   max-width: 34em;
   color: var(--oh-muted);
   font-size: 1.02rem;
   line-height: 1.7;
   word-break: keep-all;
+}
+
+body.home.oh-home .oh-cta {
+  background: var(--oh-paper);
+  text-align: left;
 }
 
 body.home.oh-home .oh-cta-link {
@@ -621,6 +690,89 @@ body.home.oh-home .oh-cta-link {
   text-decoration: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 3px;
+}
+
+body.home.oh-home .oh-cta-login {
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(18, 18, 18, 0.12);
+  max-width: 24rem;
+}
+
+body.home.oh-home .oh-cta-login-title {
+  margin: 0 0 8px;
+  color: var(--oh-ink);
+  font-size: 1.15rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+}
+
+body.home.oh-home .oh-cta-login-lead {
+  margin: 0 0 20px;
+  color: var(--oh-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+body.home.oh-home .oh-cta-login-actions {
+  display: grid;
+  gap: 10px;
+}
+
+body.home.oh-home .oh-login-naver,
+body.home.oh-home .oh-login-kakao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-size: 0.88rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+body.home.oh-home .oh-login-n {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background: #03c75a;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+body.home.oh-home .oh-login-k {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  color: #191919;
+}
+
+body.home.oh-home .oh-login-kakao {
+  background: #fee500;
+  border-color: #fee500;
+}
+
+body.home.oh-home .oh-cta-login .oh-cta-link {
+  justify-self: start;
+  margin-top: 8px;
+}
+
+body.home.oh-home .oh-cta-login .account-nav {
+  margin-top: 16px;
+}
+
+body.home.oh-home .oh-cta-login .account-nav a {
+  color: var(--oh-ink);
+  font-weight: 650;
+  text-decoration: none;
 }
 
 body.home.oh-home .home-end {

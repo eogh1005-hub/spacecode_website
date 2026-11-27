@@ -1,5 +1,5 @@
 (function () {
-  var nav = document.querySelector("header nav");
+  var nav = document.querySelector(".account-nav");
   if (!nav || nav.querySelector("[data-account-link]")) return;
   var link = document.createElement("a");
   link.setAttribute("data-account-link", "");
