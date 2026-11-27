@@ -22,9 +22,7 @@
     if (!target) return;
     target.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
     setCurrent(id);
-    if (history.replaceState) {
-      history.replaceState(null, "", "#" + id);
-    }
+    if (history.replaceState) history.replaceState(null, "", "#" + id);
   }
 
   links.forEach(function (link) {
@@ -64,4 +62,25 @@
   );
 
   sections.forEach(function (section) { observer.observe(section); });
+
+  var reveals = Array.prototype.slice.call(document.querySelectorAll(".journey-reveal"));
+  if (!reveals.length) return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    reveals.forEach(function (node) { node.classList.add("is-in"); });
+    return;
+  }
+
+  var revealWatch = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        revealWatch.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.14, rootMargin: "0px 0px -10% 0px" }
+  );
+
+  reveals.forEach(function (node) { revealWatch.observe(node); });
 })();
