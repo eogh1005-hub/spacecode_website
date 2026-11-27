@@ -28,8 +28,8 @@
     scrollTrigger: {
       trigger: section,
       start: "top top",
-      end: "+=220%",
-      scrub: 0.5,
+      end: "+=120%",
+      scrub: 0.28,
       pin: true,
       anticipatePin: 1,
       invalidateOnRefresh: true
