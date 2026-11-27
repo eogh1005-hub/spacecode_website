@@ -1,4 +1,9 @@
 :root {
+  /* ===== 히어로 확대 중심 (사진 기준 %) — 숫자만 바꿔 맞추면 됨 ===== */
+  --zoom-x: 62%;
+  --zoom-y: 11%;
+  --zoom-max: 3.15;
+
   --oh-ink: #121212;
   --oh-muted: #5c5c5c;
   --oh-line: #dedede;
@@ -8,9 +13,10 @@
 }
 
 body.home.oh-home {
-  height: auto;
+  height: auto !important;
   min-height: 100dvh;
-  overflow: auto;
+  overflow-x: clip;
+  overflow-y: visible !important;
   display: block;
   background: var(--oh-white);
   color: var(--oh-ink);
@@ -106,8 +112,13 @@ body.home.oh-home main > section {
   max-width: none;
 }
 
+body.home.oh-home .oh-hero-zoom {
+  position: relative;
+}
+
 body.home.oh-home .oh-hero {
   position: relative;
+  height: 100dvh;
   min-height: 100dvh;
   display: grid;
   align-items: end;
@@ -128,7 +139,7 @@ body.home.oh-home .oh-hero-media {
     );
 }
 
-body.home.oh-home .oh-hero-media::after {
+body.home.oh-home .oh-hero-media:not(.has-photo)::after {
   content: "사진 자리";
   position: absolute;
   left: 50%;
@@ -141,12 +152,242 @@ body.home.oh-home .oh-hero-media::after {
   text-transform: uppercase;
 }
 
+body.home.oh-home .oh-hero-media.has-photo {
+  background: #1a1a1a;
+}
+
+body.home.oh-home .oh-hero-zoom-layer {
+  position: absolute;
+  inset: 0;
+  transform-origin: var(--zoom-x) var(--zoom-y);
+  will-change: transform;
+}
+
+body.home.oh-home .oh-hero-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+body.home.oh-home .oh-hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(12, 12, 12, 0.1) 0%, rgba(12, 12, 12, 0.5) 100%);
+  pointer-events: none;
+}
+
+body.home.oh-home .oh-hero-schematic {
+  position: absolute;
+  left: var(--zoom-x);
+  top: var(--zoom-y);
+  z-index: 3;
+  width: min(92vw, 920px);
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  will-change: opacity;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-panel {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.9fr) minmax(0, 1.35fr);
+  gap: 18px 22px;
+  align-items: stretch;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(8, 8, 8, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+body.home.oh-home .oh-hero-schematic .sch-photo {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-photo figcaption {
+  display: grid;
+  gap: 2px;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: Pretendard, "Segoe UI", sans-serif;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-photo-kicker {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+body.home.oh-home .oh-hero-schematic .sch-photo figcaption strong {
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-photo figcaption span:last-child {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+body.home.oh-home .oh-hero-schematic .sch-explain {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Pretendard, "Segoe UI", sans-serif;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-explain-kicker {
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+body.home.oh-home .oh-hero-schematic .sch-explain-title {
+  margin: 0;
+  font-size: clamp(14px, 1.5vw, 17px);
+  font-weight: 550;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-flow {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-waves {
+  display: grid;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-waves-title {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 550;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+body.home.oh-home .oh-hero-schematic .sch-wave-row {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-wave-row span {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.72);
+  font-variant-numeric: tabular-nums;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-wave-row svg {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: 22px;
+  overflow: visible;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-line {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.88);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-line-soft {
+  stroke: rgba(255, 255, 255, 0.45);
+  stroke-dasharray: 3 4;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-node {
+  fill: rgba(10, 10, 10, 0.35);
+  stroke: rgba(255, 255, 255, 0.92);
+  stroke-width: 1;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-core {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.95);
+  stroke-width: 1.2;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-label {
+  fill: rgba(255, 255, 255, 0.9);
+  font-family: Pretendard, "Segoe UI", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-label-en {
+  fill: rgba(255, 255, 255, 0.55);
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-note {
+  fill: rgba(255, 255, 255, 0.72);
+  font-family: Pretendard, "Segoe UI", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+body.home.oh-home .oh-hero-schematic .sch-wave {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 1.2;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+@media (max-width: 720px) {
+  body.home.oh-home .oh-hero-schematic .sch-panel {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  body.home.oh-home .oh-hero-schematic .sch-photo img {
+    min-height: 160px;
+    max-height: 200px;
+  }
+}
+
 body.home.oh-home .oh-hero-copy {
   position: relative;
-  z-index: 1;
+  z-index: 4;
   width: min(1180px, calc(100% - 56px));
   margin: 0 auto;
   padding: 0 0 64px;
+  will-change: opacity, transform;
 }
 
 body.home.oh-home .oh-hero-brand {
