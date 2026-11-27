@@ -41,8 +41,6 @@ html.phone {
     color: #111111;
   }
 
-  .logo-tag { color: #111111; }
-
   .logo-text {
     width: max-content;
     max-width: 100%;
@@ -50,9 +48,11 @@ html.phone {
 
   .logo-mark { height: 28px; }
 
-  .logo-name { font-size: 24px; }
-
-  .logo-tag { font-size: 0.72rem; }
+  .logo-name {
+    font-size: 28px;
+    line-height: 28px;
+    height: 28px;
+  }
 
   .page-hero { padding: 28px 22px 12px; }
 

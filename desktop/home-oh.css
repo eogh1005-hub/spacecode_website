@@ -1,0 +1,466 @@
+:root {
+  --oh-ink: #121212;
+  --oh-muted: #5c5c5c;
+  --oh-line: #dedede;
+  --oh-paper: #f4f1ec;
+  --oh-white: #ffffff;
+  --oh-soft: #ece8e2;
+}
+
+body.home.oh-home {
+  height: auto;
+  min-height: 100dvh;
+  overflow: auto;
+  display: block;
+  background: var(--oh-white);
+  color: var(--oh-ink);
+  font-family: Pretendard, "Segoe UI", sans-serif;
+}
+
+body.home.oh-home header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: transparent;
+  border-bottom: 0;
+  mix-blend-mode: normal;
+}
+
+body.home.oh-home header.is-solid {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--oh-line);
+}
+
+body.home.oh-home .bar {
+  max-width: none;
+  padding: 22px 28px;
+}
+
+body.home.oh-home .logo-name {
+  font-family: Pretendard, sans-serif;
+  font-size: 28px;
+  line-height: 28px;
+  height: 28px;
+  letter-spacing: -0.06em;
+  color: var(--oh-ink);
+}
+
+body.home.oh-home header .logo-mark {
+  height: 28px;
+  filter: invert(1);
+}
+
+body.home.oh-home header.on-dark .logo-name,
+body.home.oh-home header:not(.is-solid) .logo-name {
+  color: #f4f4f4;
+}
+
+body.home.oh-home header.on-dark .logo-mark,
+body.home.oh-home header:not(.is-solid) .logo-mark {
+  filter: none;
+}
+
+body.home.oh-home header.is-solid .logo-name {
+  color: var(--oh-ink);
+}
+
+body.home.oh-home header.is-solid .logo-mark {
+  filter: invert(1);
+}
+
+body.home.oh-home .mega-toggle {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+body.home.oh-home header:not(.is-solid) .mega-toggle,
+body.home.oh-home header.on-dark .mega-toggle {
+  color: #f4f4f4;
+}
+
+body.home.oh-home header.is-solid .mega-toggle {
+  color: var(--oh-ink);
+}
+
+body.home.oh-home .oh-page {
+  display: block;
+  color: var(--oh-ink);
+}
+
+body.home.oh-home main > section {
+  color: inherit;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  max-width: none;
+}
+
+body.home.oh-home .oh-hero {
+  position: relative;
+  min-height: 100dvh;
+  display: grid;
+  align-items: end;
+  padding: 0;
+  color: #f7f7f7;
+  overflow: hidden;
+}
+
+body.home.oh-home .oh-hero-media {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(12, 12, 12, 0.18) 0%, rgba(12, 12, 12, 0.55) 100%),
+    repeating-linear-gradient(
+      -32deg,
+      #2a2a2a 0 14px,
+      #242424 14px 28px
+    );
+}
+
+body.home.oh-home .oh-hero-media::after {
+  content: "사진 자리";
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+body.home.oh-home .oh-hero-copy {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, calc(100% - 56px));
+  margin: 0 auto;
+  padding: 0 0 64px;
+}
+
+body.home.oh-home .oh-hero-brand {
+  margin: 0 0 18px;
+  font-size: clamp(3.4rem, 9vw, 7.2rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+}
+
+body.home.oh-home .oh-hero-lead {
+  margin: 0;
+  max-width: 22em;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.65;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+}
+
+body.home.oh-home .oh-section {
+  width: min(1180px, calc(100% - 56px));
+  margin: 0 auto;
+  padding: 110px 0;
+}
+
+body.home.oh-home .oh-kicker {
+  margin: 0 0 18px;
+  color: var(--oh-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+body.home.oh-home .oh-manifesto {
+  background: var(--oh-paper);
+}
+
+body.home.oh-home .oh-manifesto-title {
+  margin: 0;
+  max-width: 16em;
+  font-size: clamp(2rem, 4.6vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.05em;
+  word-break: keep-all;
+}
+
+body.home.oh-home .oh-split {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+body.home.oh-home .oh-split-copy h2 {
+  margin: 0 0 22px;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: -0.045em;
+  word-break: keep-all;
+}
+
+body.home.oh-home .oh-split-copy p {
+  margin: 0 0 16px;
+  color: var(--oh-muted);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  word-break: keep-all;
+}
+
+body.home.oh-home .oh-split-copy p:last-child {
+  margin-bottom: 0;
+}
+
+body.home.oh-home .oh-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background:
+    linear-gradient(180deg, rgba(18, 18, 18, 0.04), rgba(18, 18, 18, 0.08)),
+    repeating-linear-gradient(135deg, #e8e4dc 0 12px, #e2ddd4 12px 24px);
+  overflow: hidden;
+}
+
+body.home.oh-home .oh-frame::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(18, 18, 18, 0.38);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+body.home.oh-home .oh-frame.is-wide {
+  aspect-ratio: 16 / 9;
+}
+
+body.home.oh-home .oh-works-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 42px;
+}
+
+body.home.oh-home .oh-works-head h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  word-break: keep-all;
+}
+
+body.home.oh-home .oh-works-head a {
+  color: var(--oh-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+body.home.oh-home .oh-works-list {
+  display: grid;
+  gap: 28px;
+}
+
+body.home.oh-home .oh-work {
+  display: grid;
+  grid-template-columns: 88px 1fr 1.35fr;
+  gap: 24px;
+  align-items: start;
+  padding: 28px 0;
+  border-top: 1px solid var(--oh-line);
+  text-decoration: none;
+  color: inherit;
+}
+
+body.home.oh-home .oh-work:last-child {
+  border-bottom: 1px solid var(--oh-line);
+}
+
+body.home.oh-home .oh-work-num {
+  margin: 0;
+  color: var(--oh-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+body.home.oh-home .oh-work-copy h3 {
+  margin: 0 0 10px;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  word-break: keep-all;
+}
+
+body.home.oh-home .oh-work-copy p {
+  margin: 0;
+  color: var(--oh-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  word-break: keep-all;
+}
+
+body.home.oh-home .oh-work .oh-frame {
+  aspect-ratio: 16 / 10;
+}
+
+body.home.oh-home .oh-process {
+  background: var(--oh-ink);
+  color: #f4f4f4;
+}
+
+body.home.oh-home .oh-process .oh-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+body.home.oh-home .oh-process .oh-kicker {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+body.home.oh-home .oh-process h2 {
+  margin: 0 0 36px;
+  max-width: 14em;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  word-break: keep-all;
+}
+
+body.home.oh-home .oh-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+body.home.oh-home .oh-step {
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+body.home.oh-home .oh-step strong {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+body.home.oh-home .oh-step p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  word-break: keep-all;
+}
+
+body.home.oh-home .oh-cta {
+  background: var(--oh-paper);
+  text-align: left;
+}
+
+body.home.oh-home .oh-cta h2 {
+  margin: 0 0 18px;
+  max-width: 12em;
+  font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  word-break: keep-all;
+}
+
+body.home.oh-home .oh-cta p {
+  margin: 0 0 28px;
+  max-width: 34em;
+  color: var(--oh-muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+body.home.oh-home .oh-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--oh-ink);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 3px;
+}
+
+body.home.oh-home .home-end {
+  margin-top: 0;
+}
+
+body.home.oh-home .oh-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.home.oh-home .oh-reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  body.home.oh-home .bar {
+    padding: 18px 20px;
+  }
+
+  body.home.oh-home .oh-hero-copy,
+  body.home.oh-home .oh-section {
+    width: calc(100% - 40px);
+  }
+
+  body.home.oh-home .oh-split,
+  body.home.oh-home .oh-work,
+  body.home.oh-home .oh-steps {
+    grid-template-columns: 1fr;
+  }
+
+  body.home.oh-home .oh-work-num {
+    margin-bottom: -8px;
+  }
+
+  body.home.oh-home .oh-works-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  body.home.oh-home .oh-section {
+    padding: 72px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.home.oh-home .oh-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

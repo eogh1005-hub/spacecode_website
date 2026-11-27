@@ -6,16 +6,16 @@
   <meta name="color-scheme" content="light only">
   <script src="../노선.js"></script>
   <meta name="naver-site-verification" content="5ba79f10a527d260ec7d3d58ff6c681db0956954" />
-  <title>Space Code — 건축·건설 소프트웨어</title>
-  <meta name="description" content="공간을 더 나은 삶으로. 살기 좋은 공간과, 그 공간을 그리는 사람들을 위한 기술을 만듭니다.">
+  <title>Space Code — 스페이스 코드</title>
+  <meta name="description" content="리모델링과 IoT를 함께 설계해, 생활이 더 편해지는 공간을 만듭니다.">
   <link rel="icon" href="../로고/favicon.ico?v=5">
   <link rel="icon" type="image/png" sizes="48x48" href="../로고/favicon-48.png?v=5">
   <link rel="icon" type="image/png" sizes="32x32" href="../로고/favicon.png?v=5">
   <link rel="apple-touch-icon" href="../로고/apple-touch-icon.png?v=5">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap">
-  <link rel="stylesheet" href="style.css?v=slogan2">
+  <link rel="stylesheet" href="style.css?v=oh1">
+  <link rel="stylesheet" href="home-oh.css?v=oh2">
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -25,17 +25,13 @@
   </script>
   <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "46275436e9d74a7daa6f9fd8114d3270"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
-<body class="home">
-  <div class="home-video-frame">
-    <video class="home-video" autoplay muted loop playsinline webkit-playsinline preload="auto" src="../media/hero.mp4?v=white"></video>
-  </div>
-  <header>
+<body class="home oh-home">
+  <header data-oh-header>
     <div class="bar">
       <a class="logo" href="index.html">
         <img class="logo-mark" src="../로고/mark-white.png" alt="">
         <span class="logo-text">
-          <span class="logo-name">SPACE CODE</span>
-          <span class="logo-tag">Built to code, Built by code</span>
+          <span class="logo-name">스페이스 코드</span>
         </span>
       </a>
       <div class="bar-tools">
@@ -46,7 +42,7 @@
   </header>
   <div class="mega" id="mega-menu" hidden>
     <div class="mega-layout">
-      <p class="mega-lead">더 나은 공간을 만들기 위한 소프트웨어<br>개발 전문업체입니다.</p>
+      <p class="mega-lead">리모델링과 IoT로<br>생활이 편해지는 공간을 만듭니다.</p>
       <nav aria-label="주요 메뉴">
         <a href="../인사/greeting.html">인사<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="../제안/proposal.html">제안<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -65,458 +61,185 @@
     </div>
   </div>
 
-  <main class="home-deck">
-    <section class="home-slide home-hero">
-      <div class="home-video-shade" aria-hidden="true"></div>
-      <div class="home-slide-inner">
-        <h1>공간을 더 나은 삶으로.</h1>
-        <p class="lead">
-          살기 좋은 공간과, 그 공간을 그리는 사람들을 위한 기술을 만듭니다.
-        </p>
-      </div>
-      <button class="home-next" type="button" aria-label="아래로 이동">
-        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M6 9.5 12 15.5 18 9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-      </button>
-    </section>
-
-    <section class="home-slide">
-      <div class="home-slide-inner">
-        <form class="land-search" role="search">
-          <input class="land-search-field" id="land-query" type="text" aria-label="건축할 대지 정보를 입력해 주세요." placeholder="건축할 대지 정보를 입력해 주세요." autocomplete="off">
-          <button class="land-search-find" type="submit" aria-label="검색">
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="10.5" cy="10.5" r="6.25" fill="none" stroke="currentColor" stroke-width="2.2"></circle>
-              <path d="M15.2 15.2 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
-            </svg>
-          </button>
-        </form>
+  <main class="oh-page">
+    <section class="oh-hero">
+      <div class="oh-hero-media" aria-hidden="true"></div>
+      <div class="oh-hero-copy">
+        <p class="oh-hero-brand">스페이스 코드</p>
+        <p class="oh-hero-lead">공간을 고치고, 생활을 연결합니다. 리모델링과 IoT가 한 흐름으로 만나는 회사입니다.</p>
       </div>
     </section>
 
-    <footer class="home-end">
-      <div class="home-end-brand">
-        <a class="home-end-logo" href="index.html">
-          <img src="../로고/mark-black.png" alt="">
-          <span>스페이스 코드</span>
-        </a>
-        <p>상호명: 스페이스 코드</p>
-        <p>대표자명: 김대호</p>
-        <p>사업자 등록번호: 619-08-64629(응용 소프트웨어 개발 및 공급업)</p>
-        <p>주소: 경상남도 가좌길 44번길 14-1</p>
-        <p><a class="home-end-mail" href="mailto:contact@spacecode.app">contact@spacecode.app</a></p>
-        <p class="home-end-tag">코드를 만들었습니다, 이제 그 코드로 만들어갑니다.</p>
+    <section class="oh-manifesto">
+      <div class="oh-section oh-reveal">
+        <p class="oh-kicker">Studio</p>
+        <h1 class="oh-manifesto-title">우리는 리모델링을 진행하면서 동시에 IoT 기기를 설치해, 사람들에게 더 유용한 생활 편의를 제공하는 공간을 만듭니다.</h1>
       </div>
-      <div class="home-end-right">
-        <nav class="home-end-map" aria-label="사이트 안내">
-          <div class="home-end-col">
-            <p class="home-end-col-title">인사</p>
-            <a href="../인사/greeting.html">인사<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          </div>
-          <div class="home-end-col">
-            <p class="home-end-col-title">제안</p>
-            <a href="../제안/proposal.html">제안<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          </div>
-          <div class="home-end-col">
-            <p class="home-end-col-title">활동</p>
-            <a href="../활동/activity.html">활동<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          </div>
-          <div class="home-end-col">
-            <p class="home-end-col-title">제품</p>
-            <a href="../제품/products.html">제품<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          </div>
-          <div class="home-end-col">
-            <p class="home-end-col-title">특허</p>
-            <a href="../특허/patents.html">특허<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          </div>
-          <div class="home-end-col">
-            <p class="home-end-col-title">대시보드</p>
-            <a href="../대시보드/dashboard.html">대시보드<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          </div>
-        </nav>
-        <nav class="home-end-legal" aria-label="약관">
-          <a href="/privacy">개인정보처리방침<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a href="/terms">이용약관<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        </nav>
+    </section>
+
+    <section>
+      <div class="oh-section oh-split">
+        <div class="oh-split-copy oh-reveal">
+          <p class="oh-kicker">Approach</p>
+          <h2>공간의 형태만 바꾸지 않습니다. 사는 방식이 편해지도록 설계합니다.</h2>
+          <p>벽과 동선을 다시 짜는 일, 센서와 알림·제어 장치를 심는 일을 따로 두지 않습니다. 공사 단계에서부터 기기 배치와 사용 흐름을 같이 보고, 완공 뒤에도 생활이 자연스럽게 이어지게 합니다.</p>
+          <p>사람이 공간을 맞추는 것이 아니라, 공간이 사람의 일상에 맞춰 움직이는 집을 목표로 합니다.</p>
+        </div>
+        <div class="oh-frame oh-reveal" data-label="사진 자리" aria-hidden="true"></div>
       </div>
-    </footer>
+    </section>
+
+    <section>
+      <div class="oh-section">
+        <div class="oh-works-head oh-reveal">
+          <div>
+            <p class="oh-kicker">Focus</p>
+            <h2>우리가 붙잡는 세 가지</h2>
+          </div>
+          <a href="../인사/greeting.html">스튜디오 이야기</a>
+        </div>
+        <div class="oh-works-list">
+          <article class="oh-work oh-reveal">
+            <p class="oh-work-num">( 0 1 )</p>
+            <div class="oh-work-copy">
+              <h3>리모델링</h3>
+              <p>낡은 구조를 정리하고, 빛·동선·쓰임을 다시 맞춥니다. 공간은 보기 좋게만이 아니라, 매일 쓰기 편해야 합니다.</p>
+            </div>
+            <div class="oh-frame" data-label="사진 자리" aria-hidden="true"></div>
+          </article>
+          <article class="oh-work oh-reveal">
+            <p class="oh-work-num">( 0 2 )</p>
+            <div class="oh-work-copy">
+              <h3>IoT 설치</h3>
+              <p>경보, 알림, 제어 같은 기기를 공간 계획과 함께 넣습니다. 공사 후에 덧붙이는 장치가 아니라, 처음부터 자리 잡는 인프라입니다.</p>
+            </div>
+            <div class="oh-frame" data-label="사진 자리" aria-hidden="true"></div>
+          </article>
+          <article class="oh-work oh-reveal">
+            <p class="oh-work-num">( 0 3 )</p>
+            <div class="oh-work-copy">
+              <h3>생활 편의</h3>
+              <p>집을 비워도, 위급 상황을 놓치지 않게. 반복되는 확인을 줄이고, 필요한 정보가 사람에게 닿게 만듭니다.</p>
+            </div>
+            <div class="oh-frame" data-label="사진 자리" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="oh-process">
+      <div class="oh-section oh-reveal">
+        <p class="oh-kicker">Process</p>
+        <h2>공사와 기술이 같은 일정으로 움직입니다.</h2>
+        <div class="oh-steps">
+          <div class="oh-step">
+            <strong>01 듣기</strong>
+            <p>어떻게 사는지, 무엇이 불편한지부터 듣고 공간과 기기 요구를 한 장에 모읍니다.</p>
+          </div>
+          <div class="oh-step">
+            <strong>02 맞추기</strong>
+            <p>리모델링 도면과 IoT 배치를 같이 맞춥니다. 나중에 끼워 넣는 방식이 아닙니다.</p>
+          </div>
+          <div class="oh-step">
+            <strong>03 이어가기</strong>
+            <p>시공과 설치가 끝난 뒤에도 생활 흐름이 끊기지 않게 확인합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="oh-section">
+        <div class="oh-frame is-wide oh-reveal" data-label="사진 자리" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="oh-cta">
+      <div class="oh-section oh-reveal">
+        <p class="oh-kicker">Contact</p>
+        <h2>다음 공간을, 생활이 편해지는 쪽으로 바꿔 볼까요?</h2>
+        <p>스페이스 코드는 리모델링과 IoT를 한 팀으로 다룹니다. 공간 이야기부터 편하게 남겨 주세요.</p>
+        <a class="oh-cta-link" href="mailto:contact@spacecode.co.kr">contact@spacecode.co.kr</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="home-end">
+    <div class="home-end-brand">
+      <a class="home-end-logo" href="index.html">
+        <img src="../로고/mark-black.png" alt="">
+        <span>스페이스 코드</span>
+      </a>
+      <p>상호명: 스페이스 코드</p>
+      <p>대표자명: 김대호</p>
+      <p>사업자 등록번호: 619-08-64629</p>
+      <p>(응용 소프트웨어 개발 및 공급업/인테리어 디자인업)</p>
+      <p>주소: 경상남도 가좌길 44번길 14-1</p>
+      <p><a class="home-end-mail" href="mailto:contact@spacecode.co.kr">contact@spacecode.co.kr</a></p>
+    </div>
+    <div class="home-end-right">
+      <nav class="home-end-map" aria-label="사이트 안내">
+        <div class="home-end-col">
+          <p class="home-end-col-title">인사</p>
+          <a href="../인사/greeting.html">인사<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="home-end-col">
+          <p class="home-end-col-title">제안</p>
+          <a href="../제안/proposal.html">제안<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="home-end-col">
+          <p class="home-end-col-title">활동</p>
+          <a href="../활동/activity.html">활동<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="home-end-col">
+          <p class="home-end-col-title">제품</p>
+          <a href="../제품/products.html">제품<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="home-end-col">
+          <p class="home-end-col-title">특허</p>
+          <a href="../특허/patents.html">특허<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="home-end-col">
+          <p class="home-end-col-title">대시보드</p>
+          <a href="../대시보드/dashboard.html">대시보드<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </nav>
+      <nav class="home-end-legal" aria-label="약관">
+        <a href="/privacy">개인정보처리방침<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/terms">이용약관<svg class="mega-out" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 6.4V12.8H9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.2 8.8 13 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8.4 3H13v4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="mega.js"></script>
   <script>
     (function () {
-      var deck = document.querySelector(".home-deck");
-      if (!deck) return;
-      var slides = Array.prototype.slice.call(deck.querySelectorAll(".home-slide"));
-      deck.classList.add("is-ready");
+      var header = document.querySelector("[data-oh-header]");
+      function markHeader() {
+        if (!header) return;
+        var solid = window.scrollY > window.innerHeight * 0.72;
+        header.classList.toggle("is-solid", solid);
+        header.classList.toggle("on-dark", !solid);
+      }
+      markHeader();
+      window.addEventListener("scroll", markHeader, { passive: true });
 
-      var frame = document.querySelector(".home-video-frame");
-
-      function playNear() {
-        var lead = document.querySelector(".home-video");
-        var time = lead ? lead.currentTime || 0 : 0;
-        var margin = window.innerHeight * 0.2;
-        var now = performance.now();
-        var videos = document.querySelectorAll(".home-video");
-        Array.prototype.forEach.call(videos, function (video) {
-          var rect = video.getBoundingClientRect();
-          var near = rect.bottom > -margin && rect.top < window.innerHeight + margin;
-          if (!near) {
-            if (!video.paused) video.pause();
-            return;
-          }
-          if (lead && video !== lead && video.readyState >= 1) {
-            var drift = Math.abs((video.currentTime || 0) - time);
-            var allow = video.paused || !video._syncedAt || now - video._syncedAt > 1000;
-            if (drift > 0.15 && allow) {
-              video._syncedAt = now;
-              try { video.currentTime = time; } catch (error) {}
-            }
-          }
-          if (video.paused) {
-            var pending = video.play();
-            if (pending && pending.catch) pending.catch(function () {});
-          }
+      var nodes = Array.prototype.slice.call(document.querySelectorAll(".oh-reveal"));
+      if (!nodes.length) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+        nodes.forEach(function (node) { node.classList.add("is-in"); });
+        return;
+      }
+      var watch = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-in");
+          watch.unobserve(entry.target);
         });
-      }
-
-      function markVisible() {
-        var top = deck.scrollTop;
-        var view = deck.clientHeight;
-        var nextButton = document.querySelector(".home-next");
-        if (nextButton) nextButton.hidden = top > 24;
-        slides.forEach(function (slide) {
-          var mid = slide.offsetTop + slide.offsetHeight / 2;
-          slide.classList.toggle("is-in", mid > top && mid < top + view);
-        });
-        if (frame) frame.style.transform = "translateY(" + (-top) + "px)";
-        var heroVideo = document.querySelector(".home-video");
-        var header = document.querySelector("header");
-        if (heroVideo && header) {
-          var rect = heroVideo.getBoundingClientRect();
-          if (rect.height > 0) header.classList.toggle("on-dark", rect.bottom <= header.offsetHeight);
-        }
-        playNear();
-      }
-
-      deck.addEventListener("scroll", function () {
-        markVisible();
-        queueSettle();
-      }, { passive: true });
-      markVisible();
-      setInterval(playNear, 1000);
-
-      var dragging = false;
-      var animating = false;
-      var anim = 0;
-      var settle = 0;
-      var gliding = false;
-      var wheelTarget = 0;
-      var glideTime = 0;
-
-      function animateTo(target, done) {
-        cancelAnimationFrame(anim);
-        var start = deck.scrollTop;
-        var dist = target - start;
-        if (Math.abs(dist) < 1) {
-          animating = false;
-          if (done) done();
-          return;
-        }
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-          deck.scrollTop = target;
-          animating = false;
-          if (done) done();
-          return;
-        }
-        animating = true;
-        var t0 = performance.now();
-        function step(now) {
-          var p = Math.min(1, (now - t0) / 860);
-          var eased = 1 - Math.pow(1 - p, 3);
-          deck.scrollTop = start + dist * eased;
-          if (p < 1) anim = requestAnimationFrame(step);
-          else {
-            deck.scrollTop = target;
-            animating = false;
-            if (done) done();
-          }
-        }
-        anim = requestAnimationFrame(step);
-      }
-
-      var nextButton = document.querySelector(".home-next");
-      if (nextButton) {
-        nextButton.addEventListener("click", function () {
-          if (!slides[1]) return;
-          gliding = false;
-          wheelTarget = slides[1].offsetTop;
-          animateTo(slides[1].offsetTop);
-        });
-      }
-
-      function queueSettle() {
-        if (animating || dragging || gliding) return;
-        clearTimeout(settle);
-        settle = setTimeout(function () {
-          if (animating || dragging || gliding) return;
-          var target = nearestTop();
-          if (Math.abs(deck.scrollTop - target) > 8) animateTo(target);
-        }, 140);
-      }
-
-      function scrollLimit() {
-        return Math.max(0, deck.scrollHeight - deck.clientHeight);
-      }
-
-      function glide(now) {
-        if (!glideTime) glideTime = now;
-        var dt = Math.min(34, now - glideTime);
-        glideTime = now;
-        var diff = wheelTarget - deck.scrollTop;
-        if (Math.abs(diff) < 0.5) {
-          deck.scrollTop = wheelTarget;
-          gliding = false;
-          animating = false;
-          glideTime = 0;
-          return;
-        }
-        animating = true;
-        deck.scrollTop += diff * (1 - Math.exp(-dt / 420));
-        anim = requestAnimationFrame(glide);
-      }
-
-      deck.addEventListener("wheel", function (event) {
-        if (document.body.classList.contains("mega-open")) {
-          event.preventDefault();
-          return;
-        }
-        event.preventDefault();
-        if (dragging) return;
-        cancelAnimationFrame(anim);
-        var delta = event.deltaY;
-        if (event.deltaMode === 1) delta *= 16;
-        if (event.deltaMode === 2) delta *= deck.clientHeight || 1;
-        if (Math.abs(delta) < 1) return;
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-          deck.scrollTop = Math.max(0, Math.min(scrollLimit(), deck.scrollTop + delta));
-          return;
-        }
-        if (!gliding) wheelTarget = deck.scrollTop;
-        var notch = event.deltaMode !== 0 || Math.abs(delta) >= 50;
-        if (notch) {
-          var dir = delta > 0 ? 1 : -1;
-          var step = (deck.clientHeight || 1) * 0.25;
-          wheelTarget = Math.max(0, Math.min(scrollLimit(), wheelTarget + dir * step));
-        } else {
-          wheelTarget = Math.max(0, Math.min(scrollLimit(), wheelTarget + delta * 0.25));
-        }
-        gliding = true;
-        animating = true;
-        glideTime = 0;
-        anim = requestAnimationFrame(glide);
-      }, { passive: false });
-      var startY = 0;
-      var startTop = 0;
-      var moved = 0;
-
-      function nearestIndex() {
-        var top = deck.scrollTop;
-        var index = 0;
-        var best = Infinity;
-        slides.forEach(function (slide, i) {
-          var distance = Math.abs(slide.offsetTop - top);
-          if (distance < best) {
-            best = distance;
-            index = i;
-          }
-        });
-        return index;
-      }
-
-      function nearestTop() {
-        var review = document.getElementById("land-review");
-        var bar = document.querySelector(".land-search");
-        if (review && !review.hidden && bar) {
-          var deckTop = deck.getBoundingClientRect().top;
-          var rest = deck.scrollTop + (bar.getBoundingClientRect().top - deckTop) - 12;
-          var reviewEnd = rest + review.offsetHeight + bar.offsetHeight + 48;
-          if (deck.scrollTop >= rest - 40 && deck.scrollTop <= reviewEnd) return deck.scrollTop;
-        }
-        return slides[nearestIndex()].offsetTop;
-      }
-
-      deck.addEventListener("pointerdown", function (event) {
-        if (event.pointerType !== "mouse" || event.button !== 0) return;
-        if (event.target.closest("a, button")) return;
-        dragging = true;
-        gliding = false;
-        animating = false;
-        cancelAnimationFrame(anim);
-        moved = 0;
-        startY = event.clientY;
-        startTop = deck.scrollTop;
-        wheelTarget = deck.scrollTop;
-        deck.classList.add("is-dragging");
-        deck.setPointerCapture(event.pointerId);
-      });
-
-      deck.addEventListener("pointermove", function (event) {
-        if (!dragging) return;
-        var delta = event.clientY - startY;
-        moved = Math.max(moved, Math.abs(delta));
-        if (moved < 4) return;
-        deck.scrollTop = startTop - delta;
-      });
-
-      function endDrag() {
-        if (!dragging) return;
-        dragging = false;
-        deck.classList.remove("is-dragging");
-        if (moved < 8) return;
-        animateTo(nearestTop());
-      }
-
-      deck.addEventListener("pointerup", endDrag);
-      deck.addEventListener("pointercancel", endDrag);
-
-      function prepareVideo(video) {
-        video.muted = true;
-        video.defaultMuted = true;
-        video.playsInline = true;
-      }
-
-      function closeHallGap() {
-        var hero = document.querySelector(".home-hero");
-        var frame = document.querySelector(".home-video-frame");
-        var video = document.querySelector(".home-video");
-        var hall = hero ? hero.nextElementSibling : null;
-        if (!hero || !frame || !video || !hall) return;
-        var header = document.querySelector("header");
-        var edge = (header ? header.offsetHeight : 0) + hero.offsetHeight;
-        if (edge <= 0) return;
-        frame.style.height = edge + "px";
-        video.style.height = "100%";
-        video.style.objectFit = "cover";
-        hall.style.marginTop = "";
-      }
-
-      function startVideos() {
-        var videos = document.querySelectorAll(".home-video");
-        Array.prototype.forEach.call(videos, prepareVideo);
-        closeHallGap();
-        playNear();
-      }
-
-      startVideos();
-      window.addEventListener("resize", startVideos);
-      document.querySelector(".home-video").addEventListener("canplay", startVideos);
-      document.addEventListener("touchstart", startVideos, { passive: true });
-      document.addEventListener("visibilitychange", function () {
-        if (!document.hidden) startVideos();
-      });
-
-    })();
-  </script>
-  <script>
-    (function () {
-      var button = document.querySelector(".mega-toggle");
-      var panel = document.getElementById("mega-menu");
-      var layout = panel && panel.querySelector(".mega-layout");
-      var dismiss = panel && panel.querySelector(".mega-dismiss");
-      var bridge = panel && panel.querySelector(".mega-bridge");
-      var legal = panel && panel.querySelector(".mega-legal");
-      if (!button || !panel) return;
-      var hideTimer = 0;
-      var frame = 0;
-      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      function setOpen(open) {
-        var opened = panel.classList.contains("is-open");
-        if (open && opened) return;
-        if (!open && !opened && panel.hidden) return;
-        clearTimeout(hideTimer);
-        button.setAttribute("aria-expanded", open ? "true" : "false");
-        button.textContent = open ? "닫기" : "메뉴";
-        document.body.classList.toggle("mega-open", open);
-        if (open) {
-          var token = ++frame;
-          panel.hidden = false;
-          requestAnimationFrame(function () {
-            placeBridge();
-            requestAnimationFrame(function () {
-              if (token !== frame) return;
-              placeBridge();
-              panel.classList.add("is-open");
-            });
-          });
-          return;
-        }
-        frame += 1;
-        panel.classList.remove("is-open");
-        hideTimer = setTimeout(function () {
-          if (panel.classList.contains("is-open")) return;
-          panel.hidden = true;
-        }, reduceMotion ? 0 : 480);
-      }
-      button.addEventListener("click", function () {
-        setOpen(!panel.classList.contains("is-open"));
-      });
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") setOpen(false);
-      });
-      function placeBridge() {
-        if (!bridge || !legal) return;
-        var nav = panel.querySelector(".mega-layout nav");
-        if (!nav) return;
-        var panelBox = panel.getBoundingClientRect();
-        var navBox = nav.getBoundingClientRect();
-        var legalBox = legal.getBoundingClientRect();
-        var left = Math.min(navBox.left, legalBox.left) - panelBox.left - 24;
-        var right = Math.max(navBox.right, legalBox.right, panelBox.right) - panelBox.left;
-        var top = navBox.bottom - panelBox.top - 16;
-        if (left < 0) left = 0;
-        bridge.style.left = left + "px";
-        bridge.style.top = top + "px";
-        bridge.style.width = Math.max(0, right - left) + "px";
-        bridge.style.height = Math.max(0, panelBox.height - top) + "px";
-      }
-      window.addEventListener("resize", placeBridge);
-      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-        var closeTimer = 0;
-        function holding(node) {
-          return node && (button.contains(node) || (layout && layout.contains(node)) || node === bridge || node === legal || (bridge && bridge.contains(node)) || (legal && legal.contains(node)));
-        }
-        function cancelClose() {
-          clearTimeout(closeTimer);
-        }
-        function scheduleClose() {
-          cancelClose();
-          closeTimer = setTimeout(function () { setOpen(false); }, 180);
-        }
-        button.addEventListener("mouseenter", function () {
-          cancelClose();
-          setOpen(true);
-        });
-        if (layout) layout.addEventListener("mouseenter", cancelClose);
-        if (bridge) bridge.addEventListener("mouseenter", cancelClose);
-        if (legal) legal.addEventListener("mouseenter", cancelClose);
-        if (dismiss) {
-          dismiss.addEventListener("mouseenter", function () {
-            cancelClose();
-            setOpen(false);
-          });
-        }
-        button.addEventListener("mouseleave", function (event) {
-          if (holding(event.relatedTarget)) return;
-          scheduleClose();
-        });
-        panel.addEventListener("mouseleave", function (event) {
-          if (holding(event.relatedTarget)) return;
-          scheduleClose();
-        });
-      }
+      }, { threshold: 0.18, rootMargin: "0px 0px -8% 0px" });
+      nodes.forEach(function (node) { watch.observe(node); });
     })();
   </script>
   <script src="/계정/세션.js"></script>
-  <script src="../대지 정보 연결/대지 정보 연결.js"></script>
 </body>
 </html>

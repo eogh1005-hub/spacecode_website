@@ -61,7 +61,9 @@ body.home.phone .logo-mark {
 }
 
 body.home.phone .logo-name {
-  font-size: 24px;
+  font-size: 28px;
+  line-height: 28px;
+  height: 28px;
   color: #111111;
   -webkit-text-fill-color: #111111;
 }
@@ -78,28 +80,12 @@ body.home.phone header .logo-word {
   opacity: 1;
 }
 
-body.home.phone header .logo-tag {
-  color: #111111;
-  -webkit-text-fill-color: #111111;
-  background-color: transparent;
-}
-
 body.home.phone header.on-dark .logo-word {
   filter: none;
   mix-blend-mode: normal;
 }
 
-body.home.phone header.on-dark .logo-tag {
-  color: #f2f2f2;
-  -webkit-text-fill-color: #f2f2f2;
-}
-
-body.home.phone .logo-tag {
-  font-size: 0.72rem;
-}
-
-body.home.phone.mega-open header .logo-name,
-body.home.phone.mega-open header .logo-tag {
+body.home.phone.mega-open header .logo-name {
   color: #111111;
   -webkit-text-fill-color: #111111;
 }
@@ -270,23 +256,6 @@ body.home.phone .home-slide .lead {
   font-size: 0.9rem;
   line-height: 1.55;
   word-break: keep-all;
-}
-
-body.home.phone .home-slide.home-hall {
-  height: auto;
-  min-height: 100svh;
-  justify-content: flex-end;
-  align-items: stretch;
-  padding: 88px 22px 36px;
-  border-top: 0;
-  overflow: hidden;
-  background: #111111 url("../media/hall.jpg") center / cover no-repeat;
-}
-
-body.home.phone .home-slide.home-hall .home-slide-inner {
-  width: 100%;
-  margin: 0;
-  text-align: left;
 }
 
 body.home.phone .phone-arrive-left,
@@ -504,7 +473,7 @@ body.home.phone .phone-dash-go {
   font-weight: 700;
 }
 
-body.home.phone .home-slide:nth-child(n + 3):not(.home-hall) {
+body.home.phone .home-slide:nth-child(n + 3) {
   height: auto;
   min-height: 0;
   justify-content: flex-start;
