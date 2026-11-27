@@ -1,0 +1,22 @@
+---
+description: GitHub 저장소 연결을 eogh1005-hub으로 옮길 때 수정 위치를 표시한다
+alwaysApply: true
+---
+
+# GitHub 계정 이전
+
+이 저장소 연결은 `2023011946-collab`·`connect-archtect`에서 `eogh1005-hub`으로 옮기는 중이다.
+
+- 폴더를 열면 작업 `github-account-move`가 Problems에 빨간 줄을 남긴다. 그 줄이 값을 고칠 위치다.
+- 자동 작업 허용 창이 뜨면 허용한다. 빨간 줄이 없으면 터미널에서 작업 `github-account-move`를 실행한다.
+- 빨간 줄이 없으면 이전 계정 문자열이 없는 것이다. 저장소 주소를 추측해서 바꾸지 않는다.
+- 고칠 값은 그 줄의 GitHub 저장소 주소뿐이다. 새 저장소가 없으면 줄을 유지하고, 없다는 사실만 알린다.
+- env, key, token, secret, password 값은 채팅, 커밋, 로그, 문제 메시지에 출력하지 않는다.
+- Cloudflare, AWS, D1, Workers의 식별자와 키는 이 이전으로 바꾸지 않는다.
+- 사용자가 커밋을 말하기 전에는 커밋하지 않는다.
+
+예시로 문제 목록에 이렇게 보인다. 값 자체는 메시지에 없다.
+
+```text
+.git/config(<줄>,1): error: GitHub 저장소 연결이 이전 계정에 있습니다.
+```

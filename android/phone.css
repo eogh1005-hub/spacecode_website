@@ -1,0 +1,543 @@
+body.home.phone {
+  position: relative;
+  display: block;
+  height: auto;
+  min-height: 100svh;
+  overflow: visible;
+  background: #ffffff;
+}
+
+body.home.phone header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  transform: translateZ(0);
+}
+
+body.home.phone .bar {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: none;
+  padding: 16px 22px 6px;
+}
+
+body.home.phone .nav-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  margin-top: 2px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  appearance: none;
+}
+
+body.home.phone .nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: #111111;
+}
+
+body.home.phone header.on-dark .nav-toggle {
+  border: 0;
+  background: transparent;
+}
+
+body.home.phone header.on-dark .nav-toggle span { background: #ffffff; }
+
+body.home.phone .logo-mark {
+  height: 28px;
+}
+
+body.home.phone .logo-name {
+  font-size: 24px;
+  color: #111111;
+  -webkit-text-fill-color: #111111;
+}
+
+body.home.phone header.on-dark .logo-name {
+  color: #f2f2f2;
+  -webkit-text-fill-color: #f2f2f2;
+}
+
+body.home.phone header .logo-word {
+  object-fit: contain;
+  filter: invert(1);
+  mix-blend-mode: normal;
+  opacity: 1;
+}
+
+body.home.phone header .logo-tag {
+  color: #111111;
+  -webkit-text-fill-color: #111111;
+  background-color: transparent;
+}
+
+body.home.phone header.on-dark .logo-word {
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+body.home.phone header.on-dark .logo-tag {
+  color: #f2f2f2;
+  -webkit-text-fill-color: #f2f2f2;
+}
+
+body.home.phone .logo-tag {
+  font-size: 0.72rem;
+}
+
+body.home.phone.mega-open header .logo-name,
+body.home.phone.mega-open header .logo-tag {
+  color: #111111;
+  -webkit-text-fill-color: #111111;
+}
+
+body.home.phone .mega nav {
+  display: grid;
+  position: static;
+  width: auto;
+  margin: 8px 0 0;
+  padding: 0;
+  background: transparent;
+  color: #1a1a1a;
+}
+
+body.home.phone .mega-lead {
+  font-size: 26px;
+  white-space: normal;
+}
+
+body.home.phone header nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+  margin: 0;
+  padding: 8px 22px 18px;
+  background: #ffffff;
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+}
+
+body.home.phone header.nav-open nav { display: flex; }
+
+body.home.phone .mega-toggle {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+body.home.phone .account-nav {
+  display: flex;
+  position: static;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+body.home.phone .account-nav a {
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
+body.home.phone header.on-dark.nav-open nav { background: #000000; }
+
+body.home.phone nav a { white-space: nowrap; }
+
+body.home.phone .home-video-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100svh;
+  transform: none !important;
+}
+
+body.home.phone .home-video {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  background: #ffffff;
+}
+
+body.home.phone .home-video-shade {
+  background: none;
+}
+
+body.home.phone .home-deck {
+  position: relative;
+  z-index: 2;
+  flex: none;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  overscroll-behavior: auto;
+  cursor: auto;
+  isolation: isolate;
+}
+
+body.home.phone .home-hero,
+body.home.phone .home-hero .home-slide-inner,
+body.home.phone .home-hero h1 {
+  position: relative;
+  z-index: 4;
+}
+
+body.home.phone .home-hero {
+  position: relative;
+  height: 100svh;
+  min-height: 100svh;
+  justify-content: flex-end;
+  padding: 0 22px 28px;
+  overflow: hidden;
+}
+
+body.home.phone .home-next {
+  position: absolute;
+  bottom: 28px;
+}
+
+body.home.phone .home-deck .home-hero .home-slide-inner,
+body.home.phone .home-deck.is-ready .home-hero .home-slide-inner,
+body.home.phone .home-deck.is-ready .home-hero.is-in .home-slide-inner {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  margin-left: 0;
+  opacity: 1;
+  transform: translateZ(0);
+  color: #111111;
+  -webkit-text-fill-color: #111111;
+  background-color: transparent;
+  transition: none;
+}
+
+body.home.phone.mega-open .home-deck.is-ready .home-hero .home-slide-inner,
+body.home.phone.mega-open .home-deck.is-ready .home-hero.is-in .home-slide-inner {
+  opacity: 0;
+  transition: opacity 0.48s ease;
+}
+
+body.home.phone .home-hero h1 {
+  position: relative;
+  z-index: 4;
+  margin: 9px 0 0;
+  color: #111111;
+  -webkit-text-fill-color: #111111;
+  background-color: transparent;
+  opacity: 1;
+  font-size: 26px;
+  line-height: 1.28;
+  letter-spacing: -0.04em;
+  word-break: keep-all;
+  transform: translateZ(0);
+}
+
+body.home.phone .home-slide .lead {
+  max-width: 22em;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  word-break: keep-all;
+}
+
+body.home.phone .home-slide.home-hall {
+  height: auto;
+  min-height: 100svh;
+  justify-content: flex-end;
+  align-items: stretch;
+  padding: 88px 22px 36px;
+  border-top: 0;
+  overflow: hidden;
+  background: #111111 url("../media/hall.jpg") center / cover no-repeat;
+}
+
+body.home.phone .home-slide.home-hall .home-slide-inner {
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+body.home.phone .phone-arrive-left,
+body.home.phone .phone-arrive-right {
+  opacity: 0;
+  transition: transform 0.72s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+body.home.phone .phone-arrive-left { transform: translateX(-88px); }
+body.home.phone .phone-arrive-right { transform: translateX(72px); }
+
+body.home.phone .phone-pair .phone-arrive-left:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+body.home.phone .phone-arrive-left.is-shown,
+body.home.phone .phone-arrive-right.is-shown,
+body.home.phone .is-shown .phone-arrive-left,
+body.home.phone .is-shown .phone-arrive-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.home.phone .phone-arrive-left,
+  body.home.phone .phone-arrive-right {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+body.home.phone .phone-flow {
+  max-width: none;
+  margin: 0;
+  padding: 28px 22px 8px;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+body.home.phone .phone-open {
+  padding-top: 64px;
+  padding-bottom: 28px;
+  text-align: center;
+}
+
+body.home.phone .phone-kicker {
+  margin: 0 0 10px;
+  color: #8a8a8a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+body.home.phone .phone-flow h2 {
+  max-width: none;
+  margin: 0 0 14px;
+  color: #111111;
+  font-size: 1.55rem;
+  line-height: 1.28;
+  letter-spacing: -0.045em;
+  word-break: keep-all;
+}
+
+body.home.phone .phone-flow-lead {
+  max-width: 22em;
+  margin: 0 0 8px;
+  color: #3a3a3a;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+body.home.phone .phone-open h2,
+body.home.phone .phone-open .phone-flow-lead {
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.home.phone .phone-steps {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  margin: 6px 0 18px;
+  padding: 0;
+}
+
+body.home.phone .phone-step,
+body.home.phone .phone-wide,
+body.home.phone .phone-tile {
+  display: block;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #f3f3f3;
+  color: #111111;
+}
+
+body.home.phone .phone-step img,
+body.home.phone .phone-wide img,
+body.home.phone .phone-tile img {
+  display: block;
+  width: 100%;
+  height: 168px;
+  object-fit: cover;
+}
+
+body.home.phone .phone-step-body,
+body.home.phone .phone-wide-body {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px 16px;
+}
+
+body.home.phone .phone-from {
+  color: #6a6a6a;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  word-break: keep-all;
+}
+
+body.home.phone .phone-to {
+  color: #111111;
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+body.home.phone .phone-to em {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #111111;
+  color: #ffffff;
+  font-style: normal;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  vertical-align: 2px;
+}
+
+body.home.phone .phone-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 4px 0 18px;
+}
+
+body.home.phone .phone-tile img { height: 108px; }
+
+body.home.phone .phone-tile > span:last-child {
+  display: block;
+  padding: 12px 12px 14px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+body.home.phone .phone-tile-media {
+  position: relative;
+  display: block;
+}
+
+body.home.phone .phone-tile-media em {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #111111;
+  color: #ffffff;
+  font-style: normal;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+body.home.phone .phone-tile-soon .phone-tile-media em {
+  background: #c8c8c8;
+  color: #ffffff;
+}
+
+body.home.phone .phone-close { padding-bottom: 28px; }
+
+body.home.phone .phone-dash {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 0;
+  padding: 22px 20px 20px;
+  border-radius: 22px;
+  background: #111111;
+  color: #ffffff;
+}
+
+body.home.phone .phone-dash .phone-kicker { color: #b5b5b5; }
+
+body.home.phone .phone-dash strong {
+  font-size: 1.28rem;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+body.home.phone .phone-dash-go {
+  width: fit-content;
+  margin-top: 8px;
+  border-bottom: 1px solid #ffffff;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+body.home.phone .home-slide:nth-child(n + 3):not(.home-hall) {
+  height: auto;
+  min-height: 0;
+  justify-content: flex-start;
+  padding: 72px 22px 0;
+}
+
+body.home.phone .home-slide:nth-child(3) {
+  padding-top: 72px;
+}
+
+body.home.phone .home-slide:last-child {
+  padding-bottom: 72px;
+}
+
+body.home.phone .btn {
+  font-size: 0.86rem;
+}
+
+body.home.phone .section-label {
+  margin-bottom: 14px;
+  font-size: 0.75rem;
+}
+
+body.home.phone .home-slide h2 {
+  max-width: 11em;
+  font-size: 1.42rem;
+  line-height: 1.32;
+  word-break: keep-all;
+}
+
+body.home.phone .mega-legal {
+  position: static;
+  right: auto;
+  bottom: auto;
+  margin: 10px 0 20px;
+}

@@ -1,0 +1,154 @@
+html.phone {
+  header { z-index: 3; }
+
+  .bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    max-width: none;
+    padding: 16px 22px 10px;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    margin-top: 2px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    appearance: none;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background: #111111;
+  }
+
+  .logo-mark { height: 28px; }
+
+  .logo-name {
+    font-size: 22px;
+    color: #111111;
+  }
+
+  .logo-tag { color: #111111; }
+
+  .logo-text {
+    width: max-content;
+    max-width: 100%;
+  }
+
+  .logo-mark { height: 28px; }
+
+  .logo-name { font-size: 24px; }
+
+  .logo-tag { font-size: 0.72rem; }
+
+  .page-hero { padding: 28px 22px 12px; }
+
+  .page-hero h1 {
+    max-width: 11em;
+    font-size: 1.45rem;
+    line-height: 1.32;
+    word-break: keep-all;
+  }
+
+  section,
+  .hero {
+    padding: 12px 22px 40px;
+  }
+
+  .lead,
+  .facts span,
+  article p {
+    font-size: 0.95rem;
+    word-break: keep-all;
+  }
+
+  .news-cover,
+  .news-cover.view-board,
+  .news-pages,
+  .news-intro {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .view-kicker {
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+  }
+
+  footer { padding: 24px 22px 40px; }
+
+  .interest-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .interest-body { padding: 16px; }
+
+  .interest-modal { padding: 16px; }
+
+  .interest-modal-panel { padding: 24px 18px 18px; }
+
+  body.sheet .mega-legal {
+    position: static;
+    right: auto;
+    bottom: auto;
+    margin: 10px 0 20px;
+  }
+}
+
+html.phone body.sheet .bar {
+  flex-direction: row;
+  align-items: center;
+}
+
+html.phone body.sheet .page-hero {
+  padding: 28px 22px 12px;
+}
+
+html.phone body.sheet .page-hero h1 {
+  max-width: none;
+  font-size: 1.45rem;
+  line-height: 1.32;
+}
+
+html.phone body.sheet section {
+  padding: 12px 22px 40px;
+}
+
+html.phone body.sheet .home-end {
+  grid-template-columns: 1fr;
+  padding: 24px 22px 32px;
+  gap: 20px;
+}
+
+html.phone .home-end-map {
+  display: none;
+}
+
+html.phone body.sheet .home-end-legal {
+  grid-template-columns: auto auto;
+  justify-content: start;
+}
+
+html.phone body.sheet .home-end-legal a:first-child {
+  grid-column: auto;
+}
+
+html.phone .proposal-story {
+  grid-template-columns: 1fr;
+  gap: 16px;
+  scroll-margin-top: 96px;
+}

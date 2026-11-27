@@ -1,0 +1,28 @@
+---
+description: 이 웹사이트는 대지 뷰어만 담당한다. 연결 수정은 대지 정보 연결 파일만 하고, 나머지 세 묶음은 automaion of site information에서 고친다.
+alwaysApply: true
+---
+
+# 네 묶음
+
+이 웹사이트가 맡는 묶음은 대지 뷰어뿐이다. 연결을 고쳐야 하면 `대지 정보 연결/대지 정보 연결.js`만 수정한다.
+
+아래 세 묶음은 `automaion of site information`에서 고친다.
+
+- 대지 경계, 접도, 도로 폭, 주변 건축물, 건축선·도로 지정, 건축 가능 면적
+- 도시계획 용도 지역, 지구 계획 고시
+- 건축 가능 부피. 대지 저장소가 `Model-Reconstruction/preview/model-preview.json`의 벽과 높이를 읽어 올린다
+
+`desktop/index.html`과 `android/phone.html`에 검토 화면이나 계산을 다시 만들지 않는다. 홈페이지에 입력된 대지 주소 문자열은 그대로 `https://site.spacecode.app/` 화면에 넘긴다.
+
+```text
+나쁨: 빈 용도지역을 홈페이지 스크립트에서 채운다.
+좋음: 대지 정보 연결.js가 기존 검토 화면만 열고, 내용이 없으면 대지 저장소의 해당 묶음에서 고친다.
+```
+# Cloudflare Workers Builds 규칙
+- wrangler.toml에는 항상 `previews` 블록을 둔다. 지우지 않는다.
+  (dev 등 운영이 아닌 브랜치는 `wrangler preview`로 빌드되며, 이 블록이 없으면 실패한다.)
+- 프리뷰에는 운영 리소스(D1 spacecode-accounts 등)를 붙이지 않는다. 필요하면 `[[previews.d1_databases]]`에 프리뷰 전용 DB를 넣는다.
+- wrangler.toml을 바꾸거나 main을 dev에 합친 뒤에는, 푸시 전에 previews 블록이 남아 있는지 확인한다.
+- 빌드가 실패하면 추측으로 고치지 말고, 먼저 GitHub 체크(head SHA, 완료 시각)로 어느 커밋의 결과인지 확인하고 Cloudflare 빌드 로그 원문을 읽은 뒤 고친다.
+- 체크 실패 원인을 프로젝트 이름(spacecode-app / spacecode-website) 차이로 단정하지 않는다. Workers Builds는 이름을 자동으로 덮어쓴다.

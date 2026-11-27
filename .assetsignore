@@ -1,0 +1,13 @@
+.env
+.dev.vars
+.wrangler
+.git
+.gitignore
+.gitattributes
+.cursor
+.assetsignore
+CNAME
+wrangler.toml
+tools
+계정/schema.sql
+계정/worker.js

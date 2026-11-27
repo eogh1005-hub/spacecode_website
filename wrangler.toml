@@ -1,0 +1,21 @@
+name = "spacecode-app"
+main = "계정/worker.js"
+compatibility_date = "2026-10-17"
+
+# 프로덕션이 아닌 브랜치는 Workers Builds가 `npx wrangler preview`를 실행한다.
+# previews 블록이 없으면 그 명령이 CI에서 실패한다. 자산과 호환 설정은 위 값을 쓴다.
+# D1은 프리뷰에 넣지 않는다. 프리뷰가 운영 계정 데이터베이스를 건드리지 않게 한다.
+previews = { }
+
+[assets]
+directory = "."
+binding = "ASSETS"
+html_handling = "auto-trailing-slash"
+not_found_handling = "404-page"
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "spacecode-accounts"
+database_id = "cd2d3d24-a044-4afd-96fa-52f7f21f8c55"
+migrations_dir = "migrations"

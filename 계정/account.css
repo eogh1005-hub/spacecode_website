@@ -1,0 +1,291 @@
+.account-gate {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+html:has(body.account-gate) { background: #ffffff; }
+
+.account-gate .gate {
+  width: min(352px, calc(100% - 48px));
+  flex: none;
+  margin: 0;
+  padding: 58px 0 38px;
+  text-align: center;
+}
+
+.account-gate .gate-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 22px;
+  color: #1a1a1a;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: -0.03em;
+}
+
+.account-gate .gate-logo img {
+  width: 18px;
+  height: 18px;
+}
+
+.account-gate h1 {
+  max-width: none;
+  margin: 0 0 22px;
+  color: #1a1a1a;
+  font-size: 1.36rem;
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+}
+
+.account-gate .gate-naver {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 42px;
+  margin: 0;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  color: #1a1a1a;
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.account-gate .gate-n {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background: #03c75a;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 1;
+}
+
+.account-gate .gate-kakao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 42px;
+  margin: 8px 0 0;
+  border: 0;
+  border-radius: 10px;
+  background: #fee500;
+  color: #191919;
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.account-gate .gate-k {
+  display: block;
+  width: 22px;
+  height: 22px;
+  color: #191919;
+}
+
+.account-gate .gate-k svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.account-gate .gate-or {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 18px 0;
+  color: #b0b0b0;
+  font-size: 0.74rem;
+}
+
+.account-gate .gate-or::before,
+.account-gate .gate-or::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e4e4e4;
+}
+
+.account-gate .gate-form {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  text-align: left;
+}
+
+.account-gate .gate-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.account-gate .gate-form input {
+  width: 100%;
+  height: 42px;
+  padding: 0 13px;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #1a1a1a;
+  font: inherit;
+  font-size: 0.8rem;
+}
+
+.account-gate .gate-form input:focus {
+  outline: none;
+  border-color: #bdbdbd;
+}
+
+.account-gate .gate-continue {
+  width: 100%;
+  height: 42px;
+  margin-top: 3px;
+  border: 0;
+  border-radius: 10px;
+  background: #8d8d8d;
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.account-gate .gate-switch {
+  margin: 14px 0 0;
+  color: #8d8d8d;
+  font-size: 0.74rem;
+}
+
+.account-gate .gate-switch a,
+.account-gate .gate-note a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.account-gate .gate-note {
+  margin: 22px 0 0;
+  color: #9a9a9a;
+  font-size: 0.66rem;
+  line-height: 1.6;
+}
+
+.account-naver {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 0 18px;
+  border: 0;
+  background: #111111;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.account-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.account-form label {
+  display: grid;
+  gap: 6px;
+  color: #111111;
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.account-form input {
+  height: 46px;
+  padding: 0 12px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111111;
+  font: inherit;
+}
+
+.account-form input:focus {
+  outline: 1px solid #111111;
+  border-color: #111111;
+}
+
+.account-form .btn {
+  justify-content: center;
+  width: fit-content;
+  margin-top: 6px;
+  border: 0;
+  background: #111111;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.account-switch,
+.account-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 0;
+  color: #3a3a3a;
+}
+
+.account-actions .btn-primary {
+  border: 0;
+  background: #111111;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.account-actions .btn-ghost {
+  border: 1px solid #d8d8d8;
+  background: #ffffff;
+  color: #111111;
+  cursor: pointer;
+}
+
+.account-switch a {
+  color: #111111;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.account-message {
+  min-height: 1.4em;
+  margin: 0;
+  color: #8a2a2a;
+}
+
+.account-message.ok { color: #1f6b3a; }
+
+.account-rights {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.account-rights li {
+  padding: 12px 14px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+}
+
+.account-rights b { display: block; }
+
+.account-rights span { color: #3a3a3a; font-size: 0.92rem; }

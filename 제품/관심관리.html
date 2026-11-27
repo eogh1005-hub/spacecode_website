@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../노선.js"></script>
+  <title>관심 집계 — Space Code</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="../로고/favicon.ico?v=5">
+  <link rel="icon" type="image/png" sizes="48x48" href="../로고/favicon-48.png?v=5">
+  <link rel="icon" type="image/png" sizes="32x32" href="../로고/favicon.png?v=5">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap">
+  <link rel="stylesheet" href="../desktop/style.css?v=phone1">
+  <link rel="stylesheet" href="../android/pages.css?v=phone2">
+</head>
+<body class="sheet">
+  <header>
+    <div class="bar">
+      <a class="logo" href="../index.html">
+        <img class="logo-mark" src="../로고/mark-white.png" alt="">
+        <span class="logo-text">
+          <span class="logo-name">SPACE CODE</span>
+          <span class="logo-tag">Built to code, Built by code</span>
+        </span>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div class="page-banner">
+      <div class="page-hero">
+        <p class="section-label">관리</p>
+        <h1>제품 관심 집계</h1>
+        <p class="lead">관리 키를 넣으면 아이템별 방문·하트·알림과 유입경로 비율을 봅니다.</p>
+      </div>
+    </div>
+    <section class="interest-admin">
+      <form data-admin-form>
+        <label>관리 키
+          <input name="token" type="password" autocomplete="off" required>
+        </label>
+        <button class="btn btn-primary" type="submit">불러오기</button>
+      </form>
+      <p class="account-message" data-admin-message></p>
+      <div data-admin-result hidden>
+        <p>제품 페이지 방문 <strong data-page-visits>0</strong></p>
+        <table class="interest-admin-table">
+          <thead>
+            <tr>
+              <th>아이템</th>
+              <th>방문</th>
+              <th>하트</th>
+              <th>알림</th>
+            </tr>
+          </thead>
+          <tbody data-item-rows></tbody>
+        </table>
+        <h2>유입경로 비율</h2>
+        <table class="interest-admin-table">
+          <thead>
+            <tr>
+              <th>utm_source</th>
+              <th>건수</th>
+              <th>비율</th>
+            </tr>
+          </thead>
+          <tbody data-source-rows></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>Space Code</span>
+    <span>관리자 전용 화면입니다.</span>
+  </footer>
+  <script>
+    (function () {
+      var form = document.querySelector("[data-admin-form]");
+      var message = document.querySelector("[data-admin-message]");
+      var result = document.querySelector("[data-admin-result]");
+      var itemRows = document.querySelector("[data-item-rows]");
+      var sourceRows = document.querySelector("[data-source-rows]");
+      var pageVisits = document.querySelector("[data-page-visits]");
+      var saved = "";
+      try { saved = sessionStorage.getItem("bc_admin_interest") || ""; } catch (error) {}
+      if (saved && form) form.token.value = saved;
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        message.textContent = "";
+        var token = form.token.value.trim();
+        if (!token) return;
+        try { sessionStorage.setItem("bc_admin_interest", token); } catch (error) {}
+        fetch("/api/admin/interest", {
+          headers: { Authorization: "Bearer " + token }
+        }).then(function (response) {
+          return response.json().then(function (body) {
+            return { ok: response.ok, body: body };
+          });
+        }).then(function (out) {
+          if (!out.ok) {
+            result.hidden = true;
+            message.textContent = out.body.error || "불러오지 못했습니다.";
+            return;
+          }
+          result.hidden = false;
+          pageVisits.textContent = String(out.body.pageVisits || 0);
+          itemRows.innerHTML = (out.body.items || []).map(function (item) {
+            return "<tr><td>" + escapeHtml(item.name) + "</td><td>" + item.visits +
+              "</td><td>" + item.hearts + "</td><td>" + item.alerts + "</td></tr>";
+          }).join("") || "<tr><td colspan='4'>아직 아이템이 없습니다.</td></tr>";
+          sourceRows.innerHTML = (out.body.sources || []).map(function (row) {
+            return "<tr><td>" + escapeHtml(row.source) + "</td><td>" + row.count +
+              "</td><td>" + row.ratio + "%</td></tr>";
+          }).join("") || "<tr><td colspan='3'>아직 방문 기록이 없습니다.</td></tr>";
+        }).catch(function () {
+          result.hidden = true;
+          message.textContent = "서버에 연결하지 못했습니다.";
+        });
+      });
+
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>"']/g, function (char) {
+          return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" })[char];
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

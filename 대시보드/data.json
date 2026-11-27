@@ -1,0 +1,99 @@
+{
+  "tasks": [
+    {
+      "id": "t1",
+      "title": "곡면 거푸집 반입 일정 확정",
+      "board": "거푸집",
+      "assignee": "김대호",
+      "status": "진행",
+      "priority": "높음",
+      "due": "2026-11-20",
+      "done": false
+    },
+    {
+      "id": "t2",
+      "title": "유로폼 배치 결과 확인",
+      "board": "거푸집",
+      "assignee": "김대호",
+      "status": "검토",
+      "priority": "보통",
+      "due": "2026-11-18",
+      "done": false
+    },
+    {
+      "id": "t3",
+      "title": "부재별 개수표 전달",
+      "board": "거푸집",
+      "assignee": "김대호",
+      "status": "완료",
+      "priority": "높음",
+      "due": "2026-11-10",
+      "done": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "name": "거푸집",
+      "href": "거푸집.html",
+      "status": "진행중",
+      "priority": "높음",
+      "progress": 52,
+      "done": 19,
+      "total": 36,
+      "due": "2026-11-20"
+    },
+    {
+      "id": "p2",
+      "name": "화재 경보 알림 도움기",
+      "href": "화재경보.html",
+      "board": "화재경보",
+      "status": "진행중",
+      "priority": "높음",
+      "progress": 20,
+      "done": 2,
+      "total": 10,
+      "due": "2026-12-05"
+    }
+  ],
+  "team": [
+    { "id": "m1", "name": "김대호", "role": "프로젝트 총괄", "board": "전체" }
+  ],
+  "messages": [
+    {
+      "id": "msg1",
+      "from": "현장 팀",
+      "body": "거푸집 반입 일정을 확인해 주세요.",
+      "board": "거푸집",
+      "at": "2026-11-07T08:05:00+09:00",
+      "read": false
+    },
+    {
+      "id": "msg2",
+      "from": "시스템",
+      "body": "주간 보고서 초안이 준비되었습니다.",
+      "board": "거푸집",
+      "at": "2026-11-06T11:00:00+09:00",
+      "read": false
+    },
+    {
+      "id": "msg3",
+      "from": "경보 알림",
+      "body": "1층 감지기 경보를 확인해 주세요.",
+      "board": "화재경보",
+      "at": "2026-11-16T10:20:00+09:00",
+      "read": false
+    }
+  ],
+  "events": [
+    { "id": "e1", "title": "거푸집 반입", "date": "2026-11-20", "board": "거푸집" },
+    { "id": "e2", "title": "CNC 파일 확인", "date": "2026-11-18", "board": "거푸집" },
+    { "id": "e3", "title": "화재 경보 알림 점검", "date": "2026-12-05", "board": "화재경보" }
+  ],
+  "settings": {
+    "notifyMail": true,
+    "notifyPush": false,
+    "weekStart": "mon",
+    "language": "ko"
+  }
+}

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 800" role="img">
+  <title>Space Code View. 무슨 일이 일어났는가, 왜 중요한가, 어떤 기술이 사용되었는가, 건축에는 무엇이 달라지는가를 거쳐 우리는 건축을 어떻게 다시 생각해야 하는가로 이어진다.</title>
+  <style>
+    text { font-family: Pretendard, "Malgun Gothic", "Segoe UI", sans-serif; fill: #f4f5f7; }
+    .en { font-size: 13px; font-weight: 650; letter-spacing: 1.4px; }
+    .ko { font-size: 16px; font-weight: 500; }
+    .body { font-size: 14px; font-weight: 400; fill: #e4e4e4; }
+    .purpose { font-size: 18px; font-weight: 400; }
+    .sub { font-size: 15px; font-weight: 400; fill: #d5d5d5; }
+    .view { font-size: 18px; font-weight: 700; letter-spacing: 3px; }
+  </style>
+  <rect width="1680" height="800" fill="#000"/>
+  <g fill="none" stroke="#e8e8e8" stroke-width="1.5">
+    <rect x="36" y="24" width="1608" height="64"/>
+    <line x1="250" y1="24" x2="250" y2="88"/>
+    <rect x="36" y="104" width="1608" height="672"/>
+    <rect x="36" y="196" width="369" height="228"/>
+    <rect x="449" y="196" width="369" height="228"/>
+    <rect x="862" y="196" width="369" height="228"/>
+    <rect x="1275" y="196" width="369" height="228"/>
+    <line x1="412" y1="310" x2="432" y2="310"/>
+    <line x1="825" y1="310" x2="845" y2="310"/>
+    <line x1="1238" y1="310" x2="1258" y2="310"/>
+    <line x1="220.5" y1="424" x2="220.5" y2="448"/>
+    <line x1="1459.5" y1="424" x2="1459.5" y2="448"/>
+    <line x1="220.5" y1="448" x2="1459.5" y2="448"/>
+    <line x1="840" y1="448" x2="840" y2="470"/>
+    <rect x="580" y="486" width="520" height="84"/>
+    <line x1="840" y1="570" x2="840" y2="604"/>
+    <line x1="536" y1="604" x2="1144" y2="604"/>
+    <line x1="536" y1="604" x2="536" y2="626"/>
+    <line x1="1144" y1="604" x2="1144" y2="626"/>
+    <rect x="256" y="642" width="560" height="118"/>
+    <rect x="864" y="642" width="560" height="118"/>
+    <line x1="186" y1="236" x2="234" y2="236"/>
+    <line x1="609" y1="236" x2="657" y2="236"/>
+    <line x1="1022" y1="236" x2="1070" y2="236"/>
+    <line x1="1435" y1="258" x2="1483" y2="258"/>
+    <line x1="496" y1="688" x2="576" y2="688"/>
+    <line x1="1104" y1="688" x2="1184" y2="688"/>
+  </g>
+  <g fill="#e8e8e8">
+    <polygon points="446,310 432,303 432,317"/>
+    <polygon points="859,310 845,303 845,317"/>
+    <polygon points="1272,310 1258,303 1258,317"/>
+    <polygon points="840,486 833,472 847,472"/>
+    <polygon points="536,642 529,628 543,628"/>
+    <polygon points="1144,642 1137,628 1151,628"/>
+  </g>
+  <text class="en" x="143" y="61" text-anchor="middle">PURPOSE</text>
+  <text class="purpose" x="965" y="62" text-anchor="middle">건축 산업의 새로운 가능성을 발굴하고, 대중의 관심과 이해를 높여 건축 산업의 발전을 촉진합니다.</text>
+  <text class="view" x="840" y="142" text-anchor="middle">SPACE CODE VIEW</text>
+  <text class="sub" x="840" y="172" text-anchor="middle">다양한 출처를 비교하고, 핵심 정보를 선별·해석하여, SPACE CODE만의 독립적인 관점을 제시합니다.</text>
+  <text class="en" x="220" y="230" text-anchor="middle">WHAT HAPPENED</text>
+  <text class="ko" x="220" y="276" text-anchor="middle">무슨 일이 일어났는가?</text>
+  <text class="body" x="220" y="322" text-anchor="middle">주요 사건, 프로젝트, 정책,</text>
+  <text class="body" x="220" y="346" text-anchor="middle">시장 동향 등 사실을 정리합니다.</text>
+  <text class="en" x="633" y="230" text-anchor="middle">CONTEXT / ANALYSIS</text>
+  <text class="ko" x="633" y="276" text-anchor="middle">왜 중요한가?</text>
+  <text class="body" x="633" y="322" text-anchor="middle">배경, 맥락, 원인과 영향을</text>
+  <text class="body" x="633" y="346" text-anchor="middle">다양한 출처를 통해 분석합니다.</text>
+  <text class="en" x="1046" y="230" text-anchor="middle">TECHNOLOGY</text>
+  <text class="ko" x="1046" y="276" text-anchor="middle">어떤 기술이 사용되었는가?</text>
+  <text class="body" x="1046" y="322" text-anchor="middle">기술의 목적, 작동 방식,</text>
+  <text class="body" x="1046" y="346" text-anchor="middle">장점과 한계, 관련 동향을 살핍니다.</text>
+  <text class="en" x="1459" y="228" text-anchor="middle">ARCHITECTURE /</text>
+  <text class="en" x="1459" y="248" text-anchor="middle">INDUSTRY / SOCIETY</text>
+  <text class="ko" x="1459" y="292" text-anchor="middle">건축에는 무엇이 달라지는가?</text>
+  <text class="body" x="1459" y="328" text-anchor="middle">공간, 설계, 생산, 산업 구조,</text>
+  <text class="body" x="1459" y="350" text-anchor="middle">사회·도시·환경에 미치는</text>
+  <text class="body" x="1459" y="372" text-anchor="middle">영향을 해석합니다.</text>
+  <text class="en" x="840" y="518" text-anchor="middle">QUESTION</text>
+  <text class="ko" x="840" y="550" text-anchor="middle">우리는 건축을 어떻게 다시 생각해야 하는가?</text>
+  <text class="en" x="536" y="678" text-anchor="middle">PUBLIC INTEREST &amp; UNDERSTANDING</text>
+  <text class="ko" x="536" y="720" text-anchor="middle">대중의 관심과 이해 확대</text>
+  <text class="body" x="536" y="746" text-anchor="middle">건축과 기술에 대한 사회적 인식을 높입니다.</text>
+  <text class="en" x="1144" y="678" text-anchor="middle">INDUSTRY INNOVATION / DEVELOPMENT</text>
+  <text class="ko" x="1144" y="720" text-anchor="middle">건축 산업의 혁신과 발전</text>
+  <text class="body" x="1144" y="746" text-anchor="middle">새로운 가능성을 제시하고, 산업의 변화를 촉진합니다.</text>
+</svg>
