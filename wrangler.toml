@@ -17,5 +17,5 @@ run_worker_first = ["/api/*"]
 [[d1_databases]]
 binding = "DB"
 database_name = "spacecode-accounts"
-database_id = "cd2d3d24-a044-4afd-96fa-52f7f21f8c55"
+database_id = "c754dc5e-d119-45fd-85dd-d904e5369ce8"
 migrations_dir = "migrations"

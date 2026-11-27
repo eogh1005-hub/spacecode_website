@@ -11,7 +11,7 @@
   if (!layer) return;
 
   var root = getComputedStyle(document.documentElement);
-  var maxScale = parseFloat(root.getPropertyValue("--zoom-max")) || 3.15;
+  var maxScale = parseFloat(root.getPropertyValue("--zoom-max")) || 2.4;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (reduce) {
@@ -28,8 +28,8 @@
     scrollTrigger: {
       trigger: section,
       start: "top top",
-      end: "+=120%",
-      scrub: 0.28,
+      end: "+=85%",
+      scrub: 0.18,
       pin: true,
       anticipatePin: 1,
       invalidateOnRefresh: true
@@ -39,33 +39,20 @@
   tl.to(layer, { scale: maxScale, ease: "none", duration: 1 }, 0);
 
   if (copy) {
-    tl.to(copy, { opacity: 0, y: -40, ease: "none", duration: 0.32 }, 0.05);
+    tl.to(copy, { opacity: 0, y: -28, ease: "none", duration: 0.22 }, 0);
   }
 
   if (shade) {
-    tl.to(shade, { opacity: 0.62, ease: "none", duration: 0.45 }, 0.4);
+    tl.to(shade, { opacity: 0.7, ease: "none", duration: 0.28 }, 0.18);
   }
 
   if (schematic) {
-    tl.to(schematic, { opacity: 1, ease: "power1.out", duration: 0.28 }, 0.72);
-
-    var drawLines = schematic.querySelectorAll(".sch-draw");
-    drawLines.forEach(function (line) {
-      var length = 120;
-      try {
-        length = line.getTotalLength();
-      } catch (err) {}
-      gsap.set(line, {
-        strokeDasharray: length,
-        strokeDashoffset: length
-      });
-      tl.to(line, { strokeDashoffset: 0, ease: "none", duration: 0.22 }, 0.74);
-    });
+    tl.to(schematic, { opacity: 1, ease: "none", duration: 0.2 }, 0.42);
 
     var nodes = schematic.querySelectorAll(".sch-fade");
     if (nodes.length) {
       gsap.set(nodes, { opacity: 0 });
-      tl.to(nodes, { opacity: 1, stagger: 0.04, ease: "none", duration: 0.18 }, 0.8);
+      tl.to(nodes, { opacity: 1, stagger: 0.02, ease: "none", duration: 0.14 }, 0.48);
     }
   }
 

@@ -18,17 +18,10 @@
   }
 
   var path = location.pathname.replace(/\/+$/, "") || "/";
-  var onPhone = /\/android\/phone(?:\.html)?$/i.test(path);
-  var onDesktop = /\/desktop(?:\/index\.html)?$/i.test(path);
-  if (onPhone) {
-    if (!phone) location.replace("/desktop/index.html");
-    return;
-  }
-  if (onDesktop) {
-    if (phone) location.replace("/android/phone.html");
-    return;
-  }
-  if (path === "/" || /\/index\.html$/i.test(path)) {
-    location.replace(phone ? "/android/phone.html" : "/desktop/index.html");
+  var onLegacyHome =
+    /\/android\/phone(?:\.html)?$/i.test(path) ||
+    /\/desktop(?:\/index\.html)?$/i.test(path);
+  if (onLegacyHome) {
+    location.replace("/");
   }
 })();

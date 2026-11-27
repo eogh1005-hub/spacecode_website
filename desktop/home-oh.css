@@ -2,7 +2,7 @@
   /* ===== 히어로 확대 중심 (사진 기준 %) — 숫자만 바꿔 맞추면 됨 ===== */
   --zoom-x: 62%;
   --zoom-y: 11%;
-  --zoom-max: 2.55;
+  --zoom-max: 1.85;
 
   --oh-ink: #121212;
   --oh-muted: #5c5c5c;
@@ -45,58 +45,55 @@ body.home.oh-home .bar {
   padding: 22px 28px;
 }
 
-body.home.oh-home .logo-name {
+body.home.oh-home .logo-name,
+body.home.oh-home header.on-dark .logo-name,
+body.home.oh-home header:not(.is-solid) .logo-name,
+body.home.oh-home header.is-solid .logo-name {
   font-family: Pretendard, sans-serif;
   font-size: 28px;
   line-height: 28px;
   height: 28px;
   letter-spacing: -0.06em;
-  color: var(--oh-ink);
+  color: #121212 !important;
 }
 
-body.home.oh-home header .logo-mark {
-  height: 28px;
-  filter: invert(1);
-}
-
-body.home.oh-home header.on-dark .logo-name,
-body.home.oh-home header:not(.is-solid) .logo-name {
-  color: #f4f4f4;
-}
-
+body.home.oh-home header .logo-mark,
 body.home.oh-home header.on-dark .logo-mark,
-body.home.oh-home header:not(.is-solid) .logo-mark {
-  filter: none;
+body.home.oh-home header:not(.is-solid) .logo-mark,
+body.home.oh-home header.is-solid .logo-mark,
+body.home.oh-home.mega-open header .logo-mark {
+  height: 28px;
+  filter: none !important;
 }
 
-body.home.oh-home header.is-solid .logo-name {
-  color: var(--oh-ink);
+body.home.oh-home .bar-tools {
+  display: flex;
+  align-items: center;
+  gap: 22px;
 }
 
-body.home.oh-home header.is-solid .logo-mark {
-  filter: invert(1);
-}
-
-body.home.oh-home .mega-toggle {
+body.home.oh-home .mega-toggle,
+body.home.oh-home header:not(.is-solid) .mega-toggle,
+body.home.oh-home header.on-dark .mega-toggle,
+body.home.oh-home header.is-solid .mega-toggle,
+body.home.oh-home header .account-nav,
+body.home.oh-home header .account-nav a,
+body.home.oh-home header.on-dark .account-nav,
+body.home.oh-home header.on-dark .account-nav a,
+body.home.oh-home header.on-dark nav,
+body.home.oh-home header.on-dark nav a {
   border: 0;
   background: transparent;
   padding: 0;
-  color: inherit;
-  font: inherit;
-  font-size: 0.92rem;
+  margin: 0;
+  color: #121212 !important;
+  font-family: Pretendard, "Segoe UI", sans-serif;
+  font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: none;
   cursor: pointer;
-}
-
-body.home.oh-home header:not(.is-solid) .mega-toggle,
-body.home.oh-home header.on-dark .mega-toggle {
-  color: #f4f4f4;
-}
-
-body.home.oh-home header.is-solid .mega-toggle {
-  color: var(--oh-ink);
 }
 
 body.home.oh-home .oh-page {

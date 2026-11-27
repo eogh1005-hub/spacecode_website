@@ -1,36 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://spacecode.app/</loc>
+    <loc>https://spacecode.co.kr/</loc>
   </url>
   <url>
-    <loc>https://spacecode.app/desktop/index.html</loc>
+    <loc>https://spacecode.co.kr/인사/greeting.html</loc>
   </url>
   <url>
-    <loc>https://spacecode.app/android/phone.html</loc>
+    <loc>https://spacecode.co.kr/제안/proposal.html</loc>
   </url>
   <url>
-    <loc>https://spacecode.app/인사/greeting.html</loc>
+    <loc>https://spacecode.co.kr/활동/activity.html</loc>
   </url>
   <url>
-    <loc>https://spacecode.app/제안/proposal.html</loc>
+    <loc>https://spacecode.co.kr/제품/products.html</loc>
   </url>
   <url>
-    <loc>https://spacecode.app/활동/activity.html</loc>
+    <loc>https://spacecode.co.kr/특허/patents.html</loc>
   </url>
   <url>
-    <loc>https://spacecode.app/제품/products.html</loc>
+    <loc>https://spacecode.co.kr/대시보드/dashboard.html</loc>
   </url>
   <url>
-    <loc>https://spacecode.app/특허/patents.html</loc>
+    <loc>https://spacecode.co.kr/privacy/</loc>
   </url>
   <url>
-    <loc>https://spacecode.app/대시보드/dashboard.html</loc>
-  </url>
-  <url>
-    <loc>https://spacecode.app/privacy/</loc>
-  </url>
-  <url>
-    <loc>https://spacecode.app/terms/</loc>
+    <loc>https://spacecode.co.kr/terms/</loc>
   </url>
 </urlset>

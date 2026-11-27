@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://spacecode.app/sitemap.xml
+Sitemap: https://spacecode.co.kr/sitemap.xml

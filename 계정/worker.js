@@ -298,7 +298,7 @@ async function ensureKakaoColumns(env) {
 
 async function upsertKakaoUser(env, providerId, nickname, photo) {
   await ensureKakaoColumns(env);
-  const email = `kakao.${providerId}@members.spacecode.app`;
+  const email = `kakao.${providerId}@members.spacecode.co.kr`;
   const existing = await env.DB.prepare(
     "SELECT id, email, name, created_at, provider_id FROM users WHERE provider = 'kakao' AND provider_id = ?"
   ).bind(providerId).first();
@@ -845,7 +845,7 @@ function redirect(location, cookies) {
 
 function headerLocation(location) {
   if (/^https?:\/\//i.test(location)) return location;
-  const url = new URL(location, "https://spacecode.app");
+  const url = new URL(location, "https://spacecode.co.kr");
   return `${url.pathname}${url.search}`;
 }
 

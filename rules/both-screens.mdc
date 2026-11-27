@@ -1,14 +1,12 @@
 ---
-description: 웹사이트를 다룰 때는 데스크톱 화면과 안드로이드 화면을 함께 보여 준다
+description: 홈은 단일 HTML, 화면은 반응형으로 확인한다
 alwaysApply: true
 ---
 
-# 두 화면을 함께 제시
+# 한 홈, 반응형 확인
 
-웹사이트 화면, 배치, 글자, 영상, 간격을 다루면 데스크톱과 안드로이드를 함께 보여 준다.
+홈 화면은 루트 `index.html` 하나다. 데스크톱/안드로이드용 HTML을 따로 만들지 않는다.
 
-- 데스크톱은 `desktop/index.html`과 `desktop/style.css`다. 넓은 화면, 801px 이상이다.
-- 안드로이드는 `android/phone.html`과 `android/phone.css`다. 좁은 화면, 800px 이하다.
-- 결과를 말할 때 두 화면을 나란히 설명한다. 화면을 확인할 수 있으면 두 크기 모두 연다.
-- 한쪽만 고칠 때도 다른 쪽이 그대로인지 함께 확인한다.
-- 데스크톱 수치를 안드로이드 파일에 그대로 넣지 않는다.
+- 홈: `index.html` + `desktop/style.css` + `desktop/home-oh.css`
+- 좁은 화면은 CSS 미디어쿼리와 `body.phone` 클래스로 맞춘다.
+- 레이아웃을 고치면 넓은 화면과 좁은 화면을 같이 확인한다.

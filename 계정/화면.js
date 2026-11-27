@@ -12,8 +12,8 @@
     if (!next) return;
     var naver = document.querySelector(".account-naver");
     var kakao = document.querySelector(".account-kakao");
-    if (naver) naver.href = "https://spacecode.app/api/auth/naver/login?next=" + encodeURIComponent(next);
-    if (kakao) kakao.href = "https://spacecode.app/api/auth/kakao/login?next=" + encodeURIComponent(next);
+    if (naver) naver.href = "https://spacecode.co.kr/api/auth/naver/login?next=" + encodeURIComponent(next);
+    if (kakao) kakao.href = "https://spacecode.co.kr/api/auth/kakao/login?next=" + encodeURIComponent(next);
   }
 
   function returnPath() {
