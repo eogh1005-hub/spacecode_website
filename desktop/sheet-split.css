@@ -33,9 +33,23 @@ body.sheet.journey .journey-reveal.is-in {
   }
 }
 
+/* style.css 의 section{max-width:1080px} + body.sheet .oh-iot-panel{margin:0} 때문에
+   인사 박스가 왼쪽에 붙었음 → 여정 섹션은 풀폭, 안쪽 박스만 중앙 */
+body.sheet.journey .journey-block > section,
+body.sheet.journey .journey-lead,
+body.sheet.journey .journey-more,
+body.sheet.journey .journey-split-light,
+body.sheet.journey .journey-block > .oh-iot-panel {
+  max-width: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
 body.sheet.journey .journey-block > .oh-iot-panel {
   scroll-margin-top: 0;
-  width: 100%;
+  padding: 0;
 }
 
 body.sheet.journey .journey-split-light {
@@ -44,9 +58,6 @@ body.sheet.journey .journey-split-light {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  box-sizing: border-box;
-  width: 100%;
-  /* 제안 리드와 같은 좌우 여백 → 사진+글 덩어리가 화면 중앙 */
   padding: 0 clamp(24px, 6vw, 80px);
 }
 
@@ -56,13 +67,17 @@ body.sheet.journey .journey-split-light .sch-explain {
   color: #121212;
 }
 
+/* 제안 .journey-lead-inner와 같은 역할: 콘텐츠 박스만 중앙 */
 body.sheet.journey .journey-split-light .sch-panel {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  width: 100%;
+  box-sizing: border-box;
+  width: min(980px, 100%);
   max-width: 980px;
+  flex: 0 1 auto;
   height: 100%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body.sheet.journey .journey-split-light .sch-explain {
@@ -174,9 +189,7 @@ body.sheet.journey .journey-more .interest-grid {
 }
 
 body.sheet.journey .journey-lead {
-  box-sizing: border-box;
   min-height: 100dvh;
-  width: 100%;
   background: #fff;
   color: #121212;
   text-align: center;
